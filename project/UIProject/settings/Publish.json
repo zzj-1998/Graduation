@@ -1,0 +1,16 @@
+{
+	"binaryFormat":true,
+	"codeGeneration":{
+		"classNamePrefix":"UI_",
+		"codePath":"F:\\project\\GraduationProject\\MagicTower\\src\\ui",
+		"codeType":"TS-2",
+		"getMemberByName":false,
+		"ignoreNoname":true,
+		"memberNamePrefix":"m_",
+		"packageName":"fgui"
+	},
+	"compressDesc":false,
+	"fileExtension":"bin",
+	"packageCount":2,
+	"path":"F:\\project\\GraduationProject\\MagicTower\\bin\\res\\UI"
+}

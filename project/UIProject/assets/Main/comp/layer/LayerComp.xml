@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="256,64">
+  <controller name="type" exported="true" pages="0,,1," selected="0"/>
+  <displayList>
+    <loader id="n12_h6hq" name="n12" xy="0,0" size="256,64" url="ui://n1eyqnayh6hqgg" fill="scaleFree"/>
+    <text id="n16_h6hq" name="n16" xy="58,11" size="37,44" fontSize="32" color="#ffffff" align="center" vAlign="middle" bold="true" text="第">
+      <gearDisplay controller="type" pages="1"/>
+    </text>
+    <text id="n17_h6hq" name="n17" xy="159,11" size="37,44" fontSize="32" color="#ffffff" align="center" vAlign="middle" bold="true" text="层">
+      <gearDisplay controller="type" pages="1"/>
+    </text>
+    <text id="n18_h6hq" name="layer" xy="106,11" size="43,41" font="ui://n1eyqnayb9orf5" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="1">
+      <gearDisplay controller="type" pages="1"/>
+    </text>
+    <text id="n19_u6gh" name="n19" xy="74,11" size="94,44" fontSize="32" color="#ffffff" align="center" vAlign="middle" bold="true" text="序   章">
+      <gearDisplay controller="type" pages="0"/>
+    </text>
+  </displayList>
+</component>

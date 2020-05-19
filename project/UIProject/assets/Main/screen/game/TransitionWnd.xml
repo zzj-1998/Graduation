@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <controller name="type" exported="true" pages="0,,1," selected="0"/>
+  <displayList>
+    <graph id="n5_cq4x" name="n5" xy="326,24" size="704,704" alpha="0" type="rect" fillColor="#ff010101">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </graph>
+    <image id="n0_nfqt" name="n0" src="g0ajhi" fileName="screen/home/images/bg.png" xy="402,77" size="539,259" aspect="true" alpha="0">
+      <relation target="n5_cq4x" sidePair="center-center,top-top"/>
+    </image>
+    <text id="n1_nfqt" name="n1" xy="546,309" size="240,66" alpha="0" fontSize="50" color="#ffffff" align="center" vAlign="middle" autoSize="none" singleLine="true" text="第    层">
+      <gearDisplay controller="type" pages="1"/>
+      <relation target="n5_cq4x" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n2_i60q" name="layer" xy="546,308" size="240,66" alpha="0" font="ui://n1eyqnayb9orf5" fontSize="50" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="1">
+      <gearDisplay controller="type" pages="1"/>
+      <relation target="n1_nfqt" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n3_i60q" name="n3" xy="561,309" size="228,66" alpha="0" fontSize="50" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="序    章">
+      <gearDisplay controller="type" pages="0"/>
+      <relation target="n5_cq4x" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n4_i60q" name="n4" xy="761,646" size="247,44" alpha="0" fontSize="32" color="#ffffff" align="center" text="By 计算机162 zzj">
+      <relation target="n5_cq4x" sidePair="right-right,bottom-bottom"/>
+    </text>
+  </displayList>
+  <transition name="t0" autoPlay="true">
+    <item time="0" type="Alpha" target="n0_nfqt" tween="true" startValue="0" endValue="1" duration="24" ease="Linear"/>
+    <item time="0" type="Alpha" target="n5_cq4x" tween="true" startValue="0" endValue="1" duration="24" ease="Linear"/>
+    <item time="18" type="Alpha" target="n1_nfqt" tween="true" startValue="0" endValue="1" duration="12" ease="Linear"/>
+    <item time="18" type="Alpha" target="n2_i60q" tween="true" startValue="0" endValue="1" duration="12" ease="Linear"/>
+    <item time="18" type="Alpha" target="n3_i60q" tween="true" startValue="0" endValue="1" duration="12" ease="Linear"/>
+    <item time="18" type="Alpha" target="n4_i60q" tween="true" startValue="0" endValue="1" duration="12" ease="Linear"/>
+    <item time="36" type="Alpha" target="n0_nfqt" tween="true" startValue="1" endValue="0" duration="24" ease="Linear"/>
+    <item time="36" type="Alpha" target="n5_cq4x" tween="true" startValue="1" endValue="0" duration="24" ease="Linear"/>
+    <item time="42" type="Alpha" target="n1_nfqt" tween="true" startValue="1" endValue="0" duration="12" ease="Quint.Out"/>
+    <item time="42" type="Alpha" target="n2_i60q" tween="true" startValue="1" endValue="0" duration="12" ease="Quint.Out"/>
+    <item time="42" type="Alpha" target="n3_i60q" tween="true" startValue="1" endValue="0" duration="12" ease="Quint.Out"/>
+    <item time="42" type="Alpha" target="n4_i60q" tween="true" startValue="1" endValue="0" duration="12" ease="Quint.Out"/>
+  </transition>
+</component>

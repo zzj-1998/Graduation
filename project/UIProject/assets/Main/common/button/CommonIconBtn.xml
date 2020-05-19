@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="120,140" pivot="0.5,0.5" extention="Button">
+  <displayList>
+    <loader id="n43_hls7" name="icon" xy="0,0" size="120,140" align="center" vAlign="middle">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="1.10"/>
+</component>

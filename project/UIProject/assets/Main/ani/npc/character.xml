@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="32,32">
+  <controller name="type" exported="true" pages="0,,1,,2,,3," selected="3"/>
+  <displayList>
+    <loader id="n0_h7ng" name="n0" xy="0,0" size="32,32" url="ui://n1eyqnayh7ng1e">
+      <gearIcon controller="type" pages="1,2,3" values="ui://n1eyqnayh7ng16|ui://n1eyqnayh7ng1a|ui://n1eyqnayh7ng1e" default="ui://n1eyqnayh7ng12"/>
+    </loader>
+  </displayList>
+  <transition name="front" options="4">
+    <item time="0" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng12"/>
+    <item time="2" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng13"/>
+    <item time="4" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng14"/>
+    <item time="6" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng15"/>
+    <item time="8" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng12"/>
+  </transition>
+  <transition name="back" options="4">
+    <item time="0" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng1e"/>
+    <item time="2" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng1f"/>
+    <item time="4" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng1g"/>
+    <item time="6" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng1h"/>
+    <item time="8" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng1e"/>
+  </transition>
+  <transition name="left" options="4">
+    <item time="0" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng16"/>
+    <item time="2" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng17"/>
+    <item time="4" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng18"/>
+    <item time="6" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng19"/>
+    <item time="8" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng16"/>
+  </transition>
+  <transition name="right" options="4">
+    <item time="0" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng1a"/>
+    <item time="2" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng1b"/>
+    <item time="4" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng1c"/>
+    <item time="6" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng1d"/>
+    <item time="8" type="Icon" target="n0_h7ng" value="ui://n1eyqnayh7ng1a"/>
+  </transition>
+</component>

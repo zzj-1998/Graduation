@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="256,192">
+  <displayList>
+    <loader id="n11_h6hq" name="n11" xy="0,0" size="256,192" url="ui://n1eyqnayh6hqgg" fill="scaleFree"/>
+    <component id="n19_h6hq" name="key_yellow" src="h6hqgp" fileName="comp/key/KeyComp.xml" xy="0,0">
+      <Label title="1" icon="ui://n1eyqnayh6hqgn"/>
+    </component>
+    <component id="n20_h6hq" name="key_blue" src="h6hqgp" fileName="comp/key/KeyComp.xml" xy="0,64">
+      <Label title="1" icon="ui://n1eyqnayh6hqgo"/>
+    </component>
+    <component id="n21_h6hq" name="key_red" src="h6hqgp" fileName="comp/key/KeyComp.xml" xy="0,128">
+      <Label title="1" icon="ui://n1eyqnayh6hqgm"/>
+    </component>
+  </displayList>
+</component>

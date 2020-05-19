@@ -1,0 +1,25 @@
+{
+  "name": "tank3d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "bin": {
+    "tank3d": "index.js"
+  },
+  "scripts": {
+    "build": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^16.5.0",
+    "gulp": "^4.0.2",
+    "tsify": "^4.0.1",
+    "typescript": "^3.7.3",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.11.1"
+  },
+  "dependencies": {
+    "@types/node": "^13.7.1"
+  }
+}

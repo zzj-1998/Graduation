@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="384,384" extention="Label">
+  <displayList>
+    <image id="n1_h6hq" name="n1" src="h6hqgh" fileName="ani/event/images/frame.png" xy="0,0"/>
+    <component id="n0_h6hq" name="n0" src="jt4oge" fileName="common/frame/Frame.xml" xy="0,0"/>
+  </displayList>
+</component>

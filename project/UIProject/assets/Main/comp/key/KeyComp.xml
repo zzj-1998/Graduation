@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="256,64" extention="Label">
+  <displayList>
+    <loader id="n24_h6hq" name="icon" xy="10,0" size="64,64" url="ui://n1eyqnayh6hqgn" fill="scaleFree"/>
+    <text id="n22_h6hq" name="title" xy="145,14" size="72,50" font="ui://n1eyqnayb9orf5" fontSize="40" color="#ffffff" align="center" vAlign="middle" autoSize="shrink" bold="true" text="1"/>
+    <text id="n23_h6hq" name="n23" xy="216,25" size="32,39" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="个"/>
+  </displayList>
+</component>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64" extention="ProgressBar">
+  <controller name="nums" exported="true" pages="0,,1," selected="0"/>
+  <controller name="gray" exported="true" pages="0,,1," selected="1"/>
+  <controller name="type" exported="true" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n1_h6hq" name="n1" src="u6ghgx" fileName="ani/event/images/Way_1.png" xy="0,0" size="64,64"/>
+    <loader id="n0_aie1" name="icon" xy="0,0" size="64,64" grayed="true" url="ui://n1eyqnayh6hqgs" fill="scale">
+      <gearLook controller="gray" pages="1" values="1,0,1,1" default="1,0,0,1"/>
+      <gearIcon controller="type" pages="1" values="ui://n1eyqnayh6hqgt" default="ui://n1eyqnayh6hqgs"/>
+    </loader>
+    <text id="n2_h6hq" name="num" xy="46,0" size="18,19" font="ui://n1eyqnayb9orf5" fontSize="12" align="center" vAlign="middle" autoSize="shrink" text="2">
+      <gearDisplay controller="nums" pages="1"/>
+    </text>
+    <image id="n4_jquc" name="bar" src="jqucgv" fileName="comp/knapsack/images/mask0.png" xy="0,0" size="64,64" alpha="0.6" fillMethod="radial360" fillClockwise="false"/>
+  </displayList>
+  <ProgressBar/>
+</component>

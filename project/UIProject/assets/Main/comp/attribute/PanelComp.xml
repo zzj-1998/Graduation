@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="256,384">
+  <displayList>
+    <loader id="n5_h6hq" name="n5" xy="0,0" size="256,384" url="ui://n1eyqnayh6hqgg" fill="scaleFree"/>
+    <image id="n6_h6hq" name="n6" src="h7ng12" fileName="ani/npc/images/Actor01-Braver01_01.png" xy="32,12" size="64,64"/>
+    <text id="n7_h6hq" name="grade" xy="124,30" size="72,50" font="ui://n1eyqnayb9orf5" fontSize="40" color="#ffffff" align="center" vAlign="middle" autoSize="shrink" bold="true" text="1"/>
+    <text id="n8_h6hq" name="n8" xy="195,41" size="32,39" fontSize="30" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="级"/>
+    <component id="n9_h6hq" name="life" src="h6hqgi" fileName="comp/attribute/attributeComp.xml" xy="27,84"/>
+    <component id="n10_h6hq" name="attack" src="h6hqgi" fileName="comp/attribute/attributeComp.xml" xy="27,121"/>
+    <component id="n11_h6hq" name="defense" src="h6hqgi" fileName="comp/attribute/attributeComp.xml" xy="27,158"/>
+    <component id="n13_h6hq" name="hit" src="h6hqgi" fileName="comp/attribute/attributeComp.xml" xy="27,195"/>
+    <component id="n12_h6hq" name="crit" src="h6hqgi" fileName="comp/attribute/attributeComp.xml" xy="27,232"/>
+    <component id="n14_h6hq" name="dodge" src="h6hqgi" fileName="comp/attribute/attributeComp.xml" xy="27,269"/>
+    <component id="n15_h6hq" name="gold" src="h6hqgi" fileName="comp/attribute/attributeComp.xml" xy="27,306"/>
+    <component id="n16_h6hq" name="experience" src="h6hqgi" fileName="comp/attribute/attributeComp.xml" xy="27,343"/>
+  </displayList>
+</component>

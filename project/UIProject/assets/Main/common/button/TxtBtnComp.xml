@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="256,64" extention="Label">
+  <displayList>
+    <loader id="n13_h6hq" name="btnSave" xy="0,0" size="256,64" url="ui://n1eyqnayh6hqgg" fill="scaleFree"/>
+    <text id="n14_h6hq" name="title" xy="43,7" size="169,50" fontSize="40" color="#ffffff" align="center" vAlign="middle" autoSize="shrink" bold="true" text="点击保存"/>
+  </displayList>
+</component>

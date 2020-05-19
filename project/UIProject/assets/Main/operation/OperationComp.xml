@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="192,192">
+  <controller name="type" exported="true" pages="0,,1,,2,,3,,4," selected="0"/>
+  <displayList>
+    <loader id="n0_z4k5" name="operation" xy="0,0" size="192,192" url="ui://n1eyqnayz4k5ga" fill="scaleMatchWidth">
+      <gearIcon controller="type" pages="1,2,3,4" values="ui://n1eyqnayz4k5gc|ui://n1eyqnayz4k5g8|ui://n1eyqnayz4k5g9|ui://n1eyqnayz4k5gb" default="ui://n1eyqnayz4k5ga"/>
+    </loader>
+    <graph id="n1_z4k5" name="btnUp" xy="64,0" size="64,64" type="rect" lineColor="#00000000" fillColor="#00ffffff"/>
+    <graph id="n2_z4k5" name="btnDown" xy="64,128" size="64,64" type="rect" lineColor="#00000000" fillColor="#00ffffff"/>
+    <graph id="n3_z4k5" name="btnRight" xy="128,64" size="64,64" type="rect" lineColor="#00000000" fillColor="#00ffffff"/>
+    <graph id="n4_z4k5" name="btnLeft" xy="0,64" size="64,64" type="rect" lineColor="#00000000" fillColor="#00ffffff"/>
+  </displayList>
+</component>

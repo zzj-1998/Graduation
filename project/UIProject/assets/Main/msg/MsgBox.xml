@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="480,40">
+  <displayList>
+    <graph id="n1_svhv" name="n1" xy="0,0" size="480,40" type="rect" lineSize="0" fillColor="#ff333333" corner="10">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n0_svhv" name="txt" xy="0,0" size="480,40" fontSize="24" color="#ffed53" align="center" vAlign="middle" autoSize="none" text="提示是什么内容呢">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+</component>

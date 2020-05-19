@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="n1eyqnay">
+  <resources>
+    <component id="prsq1" name="HomeScreen.xml" path="/screen/home/" exported="true"/>
+    <component id="prsq2" name="CommonIconBtn.xml" path="/common/button/" exported="true"/>
+    <image id="prsq3" name="explain.png" path="/screen/home/images/" scale9grid="32,17,64,13"/>
+    <image id="prsq4" name="leave.png" path="/screen/home/images/"/>
+    <image id="prsq5" name="start.png" path="/screen/home/images/"/>
+    <component id="h7ng11" name="character.xml" path="/ani/npc/" exported="true"/>
+    <image id="h7ng12" name="Actor01-Braver01_01.png" path="/ani/npc/images/"/>
+    <image id="h7ng13" name="Actor01-Braver01_02.png" path="/ani/npc/images/"/>
+    <image id="h7ng14" name="Actor01-Braver01_03.png" path="/ani/npc/images/"/>
+    <image id="h7ng15" name="Actor01-Braver01_04.png" path="/ani/npc/images/"/>
+    <image id="h7ng16" name="Actor01-Braver01_05.png" path="/ani/npc/images/"/>
+    <image id="h7ng17" name="Actor01-Braver01_06.png" path="/ani/npc/images/"/>
+    <image id="h7ng18" name="Actor01-Braver01_07.png" path="/ani/npc/images/"/>
+    <image id="h7ng19" name="Actor01-Braver01_08.png" path="/ani/npc/images/"/>
+    <image id="h7ng1a" name="Actor01-Braver01_09.png" path="/ani/npc/images/"/>
+    <image id="h7ng1b" name="Actor01-Braver01_10.png" path="/ani/npc/images/"/>
+    <image id="h7ng1c" name="Actor01-Braver01_11.png" path="/ani/npc/images/"/>
+    <image id="h7ng1d" name="Actor01-Braver01_12.png" path="/ani/npc/images/"/>
+    <image id="h7ng1e" name="Actor01-Braver01_13.png" path="/ani/npc/images/"/>
+    <image id="h7ng1f" name="Actor01-Braver01_14.png" path="/ani/npc/images/"/>
+    <image id="h7ng1g" name="Actor01-Braver01_15.png" path="/ani/npc/images/"/>
+    <image id="h7ng1h" name="Actor01-Braver01_16.png" path="/ani/npc/images/"/>
+    <image id="h7ng1i" name="Actor01-Braver17_01.png" path="/ani/npc/images/"/>
+    <image id="h7ng1j" name="Actor01-Braver17_02.png" path="/ani/npc/images/"/>
+    <image id="h7ng1k" name="Actor01-Braver17_03.png" path="/ani/npc/images/"/>
+    <image id="h7ng1l" name="Actor01-Braver17_04.png" path="/ani/npc/images/"/>
+    <component id="h7ng1x" name="GameScreen.xml" path="/screen/game/" exported="true"/>
+    <component id="h7ng1y" name="fairy.xml" path="/ani/npc/" exported="true"/>
+    <image id="bhkz1z" name="Event01-Door01_02_03.png" path="/ani/door/images/"/>
+    <image id="bhkz20" name="Event01-Door01_02_04.png" path="/ani/door/images/"/>
+    <image id="bhkz21" name="Event01-Door01_03_01.png" path="/ani/door/images/"/>
+    <image id="bhkz22" name="Event01-Door01_03_02.png" path="/ani/door/images/"/>
+    <image id="bhkz23" name="Event01-Door01_03_03.png" path="/ani/door/images/"/>
+    <image id="bhkz24" name="Event01-Door01_03_04.png" path="/ani/door/images/"/>
+    <image id="bhkz25" name="Event01-Door04_01.png" path="/ani/door/images/"/>
+    <image id="bhkz26" name="Event01-Door04_02.png" path="/ani/door/images/"/>
+    <image id="bhkz27" name="Event01-Door04_03.png" path="/ani/door/images/"/>
+    <image id="bhkz28" name="Event01-Door04_04.png" path="/ani/door/images/"/>
+    <image id="bhkz29" name="Event01-Door04_05.png" path="/ani/door/images/"/>
+    <image id="bhkz2a" name="Event01-Door04_06.png" path="/ani/door/images/"/>
+    <image id="bhkz2b" name="Event01-Door04_07.png" path="/ani/door/images/"/>
+    <image id="bhkz2c" name="Event01-Door04_08.png" path="/ani/door/images/"/>
+    <image id="bhkz2d" name="Event01-Door04_09.png" path="/ani/door/images/"/>
+    <image id="bhkz2e" name="Event01-Door04_10.png" path="/ani/door/images/"/>
+    <image id="bhkz2f" name="Event01-Door04_11.png" path="/ani/door/images/"/>
+    <image id="bhkz2g" name="Event01-Door04_12.png" path="/ani/door/images/"/>
+    <image id="bhkz2h" name="Event01-Door04_13.png" path="/ani/door/images/"/>
+    <image id="bhkz2i" name="Event01-Door04_14.png" path="/ani/door/images/"/>
+    <image id="bhkz2j" name="Event01-Door04_15.png" path="/ani/door/images/"/>
+    <image id="bhkz2k" name="Event01-Door04_16.png" path="/ani/door/images/"/>
+    <image id="bhkz2l" name="Event01-Door01_01_01.png" path="/ani/door/images/"/>
+    <image id="bhkz2m" name="Event01-Door01_01_02.png" path="/ani/door/images/"/>
+    <image id="bhkz2n" name="Event01-Door01_01_03.png" path="/ani/door/images/"/>
+    <image id="bhkz2o" name="Event01-Door01_01_04.png" path="/ani/door/images/"/>
+    <image id="bhkz2p" name="Event01-Door01_02_01.png" path="/ani/door/images/"/>
+    <image id="bhkz2q" name="Event01-Door01_02_02.png" path="/ani/door/images/"/>
+    <component id="bhkz2r" name="door_yellow.xml" path="/ani/door/" exported="true"/>
+    <component id="bhkz2s" name="door_blue.xml" path="/ani/door/" exported="true"/>
+    <component id="bhkz2t" name="door_red.xml" path="/ani/door/" exported="true"/>
+    <component id="bhkz2v" name="door_steel_blue.xml" path="/ani/door/" exported="true"/>
+    <component id="bhkz2w" name="door_steel_yellow.xml" path="/ani/door/" exported="true"/>
+    <component id="bhkz2x" name="door_steel_red.xml" path="/ani/door/" exported="true"/>
+    <component id="bhkz2y" name="door_steel_green.xml" path="/ani/door/" exported="true"/>
+    <image id="bhkz2z" name="Event01-Wall02_04.png" path="/ani/door/images/"/>
+    <image id="bhkz30" name="Event01-Wall02_08.png" path="/ani/door/images/"/>
+    <component id="bhkz33" name="wall_steel.xml" path="/ani/door/" exported="true"/>
+    <image id="bhkz34" name="Event01-Wall02_16.png" path="/ani/door/images/"/>
+    <image id="bhkz35" name="Event01-Wall02_12.png" path="/ani/door/images/"/>
+    <image id="bhkz3a" name="NPC01-01_08.png" path="/ani/npc/images/"/>
+    <image id="bhkz3b" name="NPC01-01_05.png" path="/ani/npc/images/"/>
+    <image id="bhkz3c" name="NPC01-01_06.png" path="/ani/npc/images/"/>
+    <image id="bhkz3d" name="NPC01-01_07.png" path="/ani/npc/images/"/>
+    <image id="bhkz3e" name="NPC01-01_09.png" path="/ani/npc/images/"/>
+    <image id="bhkz3f" name="NPC01-01_10.png" path="/ani/npc/images/"/>
+    <image id="bhkz3g" name="NPC01-01_11.png" path="/ani/npc/images/"/>
+    <image id="bhkz3h" name="NPC01-01_12.png" path="/ani/npc/images/"/>
+    <component id="bhkz3m" name="master.xml" path="/ani/npc/" exported="true"/>
+    <component id="bhkz3n" name="trader.xml" path="/ani/npc/" exported="true"/>
+    <component id="bhkz3o" name="thief.xml" path="/ani/npc/" exported="true"/>
+    <component id="bhkz3p" name="princess.xml" path="/ani/npc/" exported="true"/>
+    <image id="bhkz3r" name="NPC01-01_01.png" path="/ani/npc/images/"/>
+    <image id="bhkz3s" name="NPC01-01_02.png" path="/ani/npc/images/"/>
+    <image id="bhkz3t" name="NPC01-01_03.png" path="/ani/npc/images/"/>
+    <image id="bhkz3u" name="NPC01-01_04.png" path="/ani/npc/images/"/>
+    <image id="bhkz3v" name="NPC01-GongZhu_01.png" path="/ani/npc/images/"/>
+    <image id="bhkz3w" name="NPC01-GongZhu_02.png" path="/ani/npc/images/"/>
+    <image id="bhkz3x" name="NPC01-GongZhu_03.png" path="/ani/npc/images/"/>
+    <image id="bhkz3y" name="NPC01-GongZhu_04.png" path="/ani/npc/images/"/>
+    <component id="bhkz8w" name="Monster01.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz8x" name="Monster02.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz8z" name="Monster03.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz90" name="Monster04.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz91" name="Monster05.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz92" name="Monster06.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz93" name="Monster07.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz94" name="Monster08.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz95" name="Monster09.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz96" name="Monster10.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz97" name="Monster11.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz98" name="Monster12.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz99" name="Monster13.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz9a" name="Monster14.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz9p" name="Monster15.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz9q" name="Monster16.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz9r" name="Monster17.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz9s" name="Monster18.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz9t" name="Monster19.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz9u" name="Monster20.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz9v" name="Monster21.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz9w" name="Monster22.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz9x" name="Monster23.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkz9z" name="Monster25.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkza0" name="Monster26.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkza1" name="Monster27.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkza2" name="Monster28.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkza3" name="Monster29.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkza4" name="Monster30.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkza5" name="Monster31.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkza6" name="Monster32.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkza7" name="Monster33.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkza8" name="Monster34.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkza9" name="Monster35.xml" path="/ani/monster/" exported="true"/>
+    <component id="bhkzaa" name="Monster36.xml" path="/ani/monster/" exported="true"/>
+    <image id="bhkzah" name="Monster09-01_05.png" path="/ani/monster/images/"/>
+    <image id="bhkzai" name="Monster09-01_06.png" path="/ani/monster/images/"/>
+    <image id="bhkzaj" name="Monster09-01_07.png" path="/ani/monster/images/"/>
+    <image id="bhkzak" name="Monster09-01_08.png" path="/ani/monster/images/"/>
+    <image id="bhkzal" name="Monster10-01_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzam" name="Monster10-01_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzan" name="Monster10-01_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzao" name="Monster10-01_04.png" path="/ani/monster/images/"/>
+    <image id="bhkzap" name="Monster11-01_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzaq" name="Monster11-01_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzar" name="Monster11-01_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzas" name="Monster11-01_04.png" path="/ani/monster/images/"/>
+    <image id="bhkzat" name="Monster11-01_05.png" path="/ani/monster/images/"/>
+    <image id="bhkzau" name="Monster11-01_06.png" path="/ani/monster/images/"/>
+    <image id="bhkzav" name="Monster11-01_07.png" path="/ani/monster/images/"/>
+    <image id="bhkzaw" name="Monster11-01_08.png" path="/ani/monster/images/"/>
+    <image id="bhkzax" name="Monster01-01_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzay" name="Monster01-01_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzaz" name="Monster01-01_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzb0" name="Monster01-01_04.png" path="/ani/monster/images/"/>
+    <image id="bhkzb1" name="Monster01-01_05.png" path="/ani/monster/images/"/>
+    <image id="bhkzb2" name="Monster01-01_06.png" path="/ani/monster/images/"/>
+    <image id="bhkzb3" name="Monster01-01_07.png" path="/ani/monster/images/"/>
+    <image id="bhkzb4" name="Monster01-01_08.png" path="/ani/monster/images/"/>
+    <image id="bhkzb5" name="Monster01-01_09.png" path="/ani/monster/images/"/>
+    <image id="bhkzb6" name="Monster01-01_10.png" path="/ani/monster/images/"/>
+    <image id="bhkzb7" name="Monster01-01_11.png" path="/ani/monster/images/"/>
+    <image id="bhkzb8" name="Monster01-01_12.png" path="/ani/monster/images/"/>
+    <image id="bhkzb9" name="Monster01-01_13.png" path="/ani/monster/images/"/>
+    <image id="bhkzba" name="Monster01-01_14.png" path="/ani/monster/images/"/>
+    <image id="bhkzbb" name="Monster01-01_15.png" path="/ani/monster/images/"/>
+    <image id="bhkzbc" name="Monster01-01_16.png" path="/ani/monster/images/"/>
+    <image id="bhkzbd" name="Monster02-01_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzbe" name="Monster02-01_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzbf" name="Monster02-01_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzbg" name="Monster02-01_04.png" path="/ani/monster/images/"/>
+    <image id="bhkzbh" name="Monster02-01_05.png" path="/ani/monster/images/"/>
+    <image id="bhkzbi" name="Monster02-01_06.png" path="/ani/monster/images/"/>
+    <image id="bhkzbj" name="Monster02-01_07.png" path="/ani/monster/images/"/>
+    <image id="bhkzbk" name="Monster02-01_08.png" path="/ani/monster/images/"/>
+    <image id="bhkzbl" name="Monster02-01_09.png" path="/ani/monster/images/"/>
+    <image id="bhkzbm" name="Monster02-01_10.png" path="/ani/monster/images/"/>
+    <image id="bhkzbn" name="Monster02-01_11.png" path="/ani/monster/images/"/>
+    <image id="bhkzbo" name="Monster02-01_12.png" path="/ani/monster/images/"/>
+    <image id="bhkzbp" name="Monster02-01_13.png" path="/ani/monster/images/"/>
+    <image id="bhkzbq" name="Monster02-01_14.png" path="/ani/monster/images/"/>
+    <image id="bhkzbr" name="Monster02-01_15.png" path="/ani/monster/images/"/>
+    <image id="bhkzbs" name="Monster02-01_16.png" path="/ani/monster/images/"/>
+    <image id="bhkzbt" name="Monster03-01_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzbu" name="Monster03-01_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzbv" name="Monster03-01_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzbw" name="Monster03-01_04.png" path="/ani/monster/images/"/>
+    <image id="bhkzbx" name="Monster03-01_05.png" path="/ani/monster/images/"/>
+    <image id="bhkzby" name="Monster03-01_06.png" path="/ani/monster/images/"/>
+    <image id="bhkzbz" name="Monster03-01_07.png" path="/ani/monster/images/"/>
+    <image id="bhkzc0" name="Monster03-01_08.png" path="/ani/monster/images/"/>
+    <image id="bhkzc1" name="Monster03-01_09.png" path="/ani/monster/images/"/>
+    <image id="bhkzc2" name="Monster03-01_10.png" path="/ani/monster/images/"/>
+    <image id="bhkzc3" name="Monster03-01_11.png" path="/ani/monster/images/"/>
+    <image id="bhkzc4" name="Monster03-01_12.png" path="/ani/monster/images/"/>
+    <image id="bhkzc5" name="Monster03-01_13.png" path="/ani/monster/images/"/>
+    <image id="bhkzc6" name="Monster03-01_14.png" path="/ani/monster/images/"/>
+    <image id="bhkzc7" name="Monster03-01_15.png" path="/ani/monster/images/"/>
+    <image id="bhkzc8" name="Monster03-01_16.png" path="/ani/monster/images/"/>
+    <image id="bhkzcl" name="Monster03-05_13.png" path="/ani/monster/images/"/>
+    <image id="bhkzcm" name="Monster03-05_14.png" path="/ani/monster/images/"/>
+    <image id="bhkzcn" name="Monster03-05_15.png" path="/ani/monster/images/"/>
+    <image id="bhkzco" name="Monster03-05_16.png" path="/ani/monster/images/"/>
+    <image id="bhkzcp" name="Monster04-03_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzcq" name="Monster04-03_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzcr" name="Monster04-03_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzcs" name="Monster04-03_04.png" path="/ani/monster/images/"/>
+    <image id="bhkzd1" name="Monster05-01_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzd2" name="Monster05-01_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzd3" name="Monster05-01_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzd4" name="Monster05-01_04.png" path="/ani/monster/images/"/>
+    <image id="bhkzd5" name="Monster05-01_05.png" path="/ani/monster/images/"/>
+    <image id="bhkzd6" name="Monster05-01_06.png" path="/ani/monster/images/"/>
+    <image id="bhkzd7" name="Monster05-01_07.png" path="/ani/monster/images/"/>
+    <image id="bhkzd8" name="Monster05-01_08.png" path="/ani/monster/images/"/>
+    <image id="bhkzd9" name="Monster05-01_09.png" path="/ani/monster/images/"/>
+    <image id="bhkzda" name="Monster05-01_10.png" path="/ani/monster/images/"/>
+    <image id="bhkzdb" name="Monster05-01_11.png" path="/ani/monster/images/"/>
+    <image id="bhkzdc" name="Monster05-01_12.png" path="/ani/monster/images/"/>
+    <image id="bhkzdd" name="Monster06-01_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzde" name="Monster06-01_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzdf" name="Monster06-01_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzdg" name="Monster06-01_04.png" path="/ani/monster/images/"/>
+    <image id="bhkzdh" name="Monster06-01_05.png" path="/ani/monster/images/"/>
+    <image id="bhkzdi" name="Monster06-01_06.png" path="/ani/monster/images/"/>
+    <image id="bhkzdj" name="Monster06-01_07.png" path="/ani/monster/images/"/>
+    <image id="bhkzdk" name="Monster06-01_08.png" path="/ani/monster/images/"/>
+    <image id="bhkzdl" name="Monster06-01_09.png" path="/ani/monster/images/"/>
+    <image id="bhkzdm" name="Monster06-01_10.png" path="/ani/monster/images/"/>
+    <image id="bhkzdn" name="Monster06-01_11.png" path="/ani/monster/images/"/>
+    <image id="bhkzdo" name="Monster06-01_12.png" path="/ani/monster/images/"/>
+    <image id="bhkzdp" name="Monster06-01_13.png" path="/ani/monster/images/"/>
+    <image id="bhkzdq" name="Monster06-01_14.png" path="/ani/monster/images/"/>
+    <image id="bhkzdr" name="Monster06-01_15.png" path="/ani/monster/images/"/>
+    <image id="bhkzds" name="Monster06-01_16.png" path="/ani/monster/images/"/>
+    <image id="bhkzdt" name="Monster06-03_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzdu" name="Monster06-03_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzdv" name="Monster06-03_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzdw" name="Monster06-03_04.png" path="/ani/monster/images/"/>
+    <image id="bhkzdx" name="Monster06-03_05.png" path="/ani/monster/images/"/>
+    <image id="bhkzdy" name="Monster06-03_06.png" path="/ani/monster/images/"/>
+    <image id="bhkzdz" name="Monster06-03_07.png" path="/ani/monster/images/"/>
+    <image id="bhkze0" name="Monster06-03_08.png" path="/ani/monster/images/"/>
+    <image id="bhkze1" name="Monster06-03_09.png" path="/ani/monster/images/"/>
+    <image id="bhkze2" name="Monster06-03_10.png" path="/ani/monster/images/"/>
+    <image id="bhkze3" name="Monster06-03_11.png" path="/ani/monster/images/"/>
+    <image id="bhkze4" name="Monster06-03_12.png" path="/ani/monster/images/"/>
+    <image id="bhkze9" name="Monster06-05_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzea" name="Monster06-05_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzeb" name="Monster06-05_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzec" name="Monster06-05_04.png" path="/ani/monster/images/"/>
+    <image id="bhkzed" name="Monster07-01_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzee" name="Monster07-01_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzef" name="Monster07-01_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzeg" name="Monster07-01_04.png" path="/ani/monster/images/"/>
+    <image id="bhkzeh" name="Monster07-01_05.png" path="/ani/monster/images/"/>
+    <image id="bhkzei" name="Monster07-01_06.png" path="/ani/monster/images/"/>
+    <image id="bhkzej" name="Monster07-01_07.png" path="/ani/monster/images/"/>
+    <image id="bhkzek" name="Monster07-01_08.png" path="/ani/monster/images/"/>
+    <image id="bhkzel" name="Monster07-04_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzem" name="Monster07-04_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzen" name="Monster07-04_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzeo" name="Monster07-04_04.png" path="/ani/monster/images/"/>
+    <image id="bhkzep" name="Monster07-04_05.png" path="/ani/monster/images/"/>
+    <image id="bhkzeq" name="Monster07-04_06.png" path="/ani/monster/images/"/>
+    <image id="bhkzer" name="Monster07-04_07.png" path="/ani/monster/images/"/>
+    <image id="bhkzes" name="Monster07-04_08.png" path="/ani/monster/images/"/>
+    <image id="bhkzet" name="Monster08-01_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzeu" name="Monster08-01_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzev" name="Monster08-01_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzew" name="Monster08-01_04.png" path="/ani/monster/images/"/>
+    <image id="bhkzex" name="Monster08-01_09.png" path="/ani/monster/images/"/>
+    <image id="bhkzey" name="Monster08-01_10.png" path="/ani/monster/images/"/>
+    <image id="bhkzez" name="Monster08-01_11.png" path="/ani/monster/images/"/>
+    <image id="bhkzf0" name="Monster08-01_12.png" path="/ani/monster/images/"/>
+    <image id="bhkzf1" name="Monster09-01_01.png" path="/ani/monster/images/"/>
+    <image id="bhkzf2" name="Monster09-01_02.png" path="/ani/monster/images/"/>
+    <image id="bhkzf3" name="Monster09-01_03.png" path="/ani/monster/images/"/>
+    <image id="bhkzf4" name="Monster09-01_04.png" path="/ani/monster/images/"/>
+    <font id="b9orf5" name="font_num.fnt" path="/common/fonts/" exported="true"/>
+    <image id="b9orf6" name="0.png" path="/common/fonts/"/>
+    <image id="b9orf7" name="1.png" path="/common/fonts/"/>
+    <image id="b9orf8" name="2.png" path="/common/fonts/"/>
+    <image id="b9orf9" name="3.png" path="/common/fonts/"/>
+    <image id="b9orfa" name="4.png" path="/common/fonts/"/>
+    <image id="b9orfb" name="5.png" path="/common/fonts/"/>
+    <image id="b9orfc" name="6.png" path="/common/fonts/"/>
+    <image id="b9orfd" name="7.png" path="/common/fonts/"/>
+    <image id="b9orfe" name="8.png" path="/common/fonts/"/>
+    <image id="b9orff" name="9.png" path="/common/fonts/"/>
+    <component id="b9orfn" name="ExplainScreen.xml" path="/screen/home/" exported="true"/>
+    <image id="b9orfo" name="explains.png" path="/screen/home/images/"/>
+    <image id="aie1fp" name="close.png" path="/screen/home/images/"/>
+    <component id="aie1fr" name="MapItem.xml" path="/ani/event/" exported="true"/>
+    <image id="aie1fx" name="Wall_2.png" path="/ani/event/images/"/>
+    <image id="aie1fy" name="Wall_3.png" path="/ani/event/images/"/>
+    <image id="z4k5g4" name="map.png" path="/screen/game/images/"/>
+    <image id="z4k5g7" name="Wall_1.png" path="/ani/event/images/"/>
+    <image id="z4k5g8" name="btn_down.png" path="/operation/images/"/>
+    <image id="z4k5g9" name="btn_left.png" path="/operation/images/"/>
+    <image id="z4k5ga" name="btn_normal.png" path="/operation/images/"/>
+    <image id="z4k5gb" name="btn_right.png" path="/operation/images/"/>
+    <image id="z4k5gc" name="btn_up.png" path="/operation/images/"/>
+    <component id="z4k5gd" name="OperationComp.xml" path="/operation/" exported="true"/>
+    <component id="jt4oge" name="Frame.xml" path="/common/frame/" exported="true"/>
+    <component id="h6hqgg" name="WndFrame.xml" path="/common/frame/" exported="true"/>
+    <image id="h6hqgh" name="frame.png" path="/common/frame/images/"/>
+    <component id="h6hqgi" name="AttributeComp.xml" path="/comp/attribute/" exported="true"/>
+    <component id="h6hqgj" name="PanelComp.xml" path="/comp/attribute/" exported="true"/>
+    <component id="h6hqgk" name="TxtBtnComp.xml" path="/common/button/" exported="true"/>
+    <component id="h6hqgl" name="LayerComp.xml" path="/comp/layer/" exported="true"/>
+    <image id="h6hqgm" name="Item01-01_03.png" path="/comp/key/images/"/>
+    <image id="h6hqgn" name="Item01-01_01.png" path="/comp/key/images/"/>
+    <image id="h6hqgo" name="Item01-01_02.png" path="/comp/key/images/"/>
+    <component id="h6hqgp" name="KeyComp.xml" path="/comp/key/" exported="true"/>
+    <component id="h6hqgq" name="KeyPanelComp.xml" path="/comp/key/" exported="true"/>
+    <component id="h6hqgr" name="KnapsackComp.xml" path="/comp/knapsack/" exported="true"/>
+    <image id="h6hqgs" name="Item01-02_01.png" path="/comp/knapsack/images/"/>
+    <image id="h6hqgt" name="Item01-02_02.png" path="/comp/knapsack/images/"/>
+    <image id="h6hqgu" name="Item01-05_04.png" path="/comp/knapsack/images/"/>
+    <image id="jqucgv" name="mask0.png" path="/comp/knapsack/images/"/>
+    <image id="u6ghgw" name="Wall_4.png" path="/ani/event/images/"/>
+    <image id="u6ghgx" name="Way_1.png" path="/ani/event/images/"/>
+    <image id="xz9qgy" name="up.png" path="/ani/prop/images/"/>
+    <image id="xz9qgz" name="down.png" path="/ani/prop/images/"/>
+    <component id="xz9qh0" name="UpStairs.xml" path="/ani/prop/" exported="true"/>
+    <component id="xz9qh1" name="DownStairs.xml" path="/ani/prop/" exported="true"/>
+    <component id="u1oph2" name="Key_yellow.xml" path="/ani/prop/" exported="true"/>
+    <component id="u1oph3" name="Key_blue.xml" path="/ani/prop/" exported="true"/>
+    <component id="u1oph4" name="Key_red.xml" path="/ani/prop/" exported="true"/>
+    <image id="u1oph5" name="Item01-01_01.png" path="/ani/prop/images/"/>
+    <image id="u1oph6" name="Item01-01_02.png" path="/ani/prop/images/"/>
+    <image id="u1oph7" name="Item01-01_03.png" path="/ani/prop/images/"/>
+    <component id="l5czh8" name="MsgBox.xml" path="/msg/" exported="true"/>
+    <component id="g43eh9" name="Blood_red.xml" path="/ani/prop/" exported="true"/>
+    <component id="g43eha" name="Blood_blue.xml" path="/ani/prop/" exported="true"/>
+    <image id="g43ehb" name="fangyu.png" path="/ani/prop/images/"/>
+    <image id="g43ehc" name="gongji.png" path="/ani/prop/images/"/>
+    <component id="g43ehd" name="Stone_Attack.xml" path="/ani/prop/" exported="true"/>
+    <component id="g43ehe" name="Stone_Defense.xml" path="/ani/prop/" exported="true"/>
+    <component id="nfqthf" name="TransitionWnd.xml" path="/screen/game/" exported="true"/>
+    <image id="g0ajhi" name="bg.png" path="/screen/home/images/" scale9grid="353,160,16,9"/>
+  </resources>
+  <publish name="Main" genCode="true"/>
+</packageDescription>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="202,28">
+  <displayList>
+    <text id="n9_h6hq" name="attribute" xy="0,0" size="47,28" fontSize="20" color="#ffffff" align="center" vAlign="middle" bold="true" text="生命"/>
+    <text id="n10_h6hq" name="num" xy="97,0" size="104,28" font="ui://n1eyqnayb9orf5" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="shrink" bold="true" text="100"/>
+  </displayList>
+</component>
