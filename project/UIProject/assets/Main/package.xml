@@ -307,6 +307,11 @@
     <image id="z6mthl" name="Monster08-02_07.png" path="/ani/monster/images/"/>
     <image id="z6mthm" name="Monster08-02_08.png" path="/ani/monster/images/"/>
     <component id="z6mthn" name="Monster22.xml" path="/ani/monster/" exported="true"/>
+    <component id="z6mtho" name="FightWnd.xml" path="/screen/game/" exported="true"/>
+    <image id="z6mthp" name="1.png" path="/screen/game/images/"/>
+    <image id="z6mthq" name="2.png" path="/screen/game/images/"/>
+    <image id="z6mthr" name="vs.png" path="/screen/game/images/"/>
+    <image id="z6mths" name="3.png" path="/screen/game/images/"/>
   </resources>
   <publish name="Main" genCode="true"/>
 </packageDescription>

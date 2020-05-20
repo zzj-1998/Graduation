@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1059,417">
+  <controller name="type" exported="true" pages="0,,1," selected="0"/>
+  <displayList>
+    <loader id="n6_z6mt" name="n6" xy="0,0" size="1059,417" url="ui://n1eyqnayh6hqgg" fill="scaleFree">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <loader id="n7_z6mt" name="n7" xy="796,49" size="200,200" url="ui://n1eyqnayh6hqgg" fill="scaleFree">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <loader id="n13_z6mt" name="n13" xy="837,89" size="120,120" url="ui://n1eyqnayh7ng12" align="center" vAlign="middle" fill="scaleFree">
+      <relation target="n7_z6mt" sidePair="center-center,middle-middle"/>
+    </loader>
+    <loader id="n8_z6mt" name="n8" xy="58,49" size="200,200" url="ui://n1eyqnayh6hqgg" fill="scaleFree">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <loader id="n12_z6mt" name="monster" xy="99,89" size="120,120" align="center" vAlign="middle" fill="scaleFree">
+      <relation target="n8_z6mt" sidePair="center-center,middle-middle"/>
+    </loader>
+    <image id="n9_z6mt" name="n9" src="z6mthq" fileName="screen/game/images/2.png" xy="801,266" size="184,90" aspect="true"/>
+    <image id="n10_z6mt" name="n10" src="z6mthp" fileName="screen/game/images/1.png" xy="64,266" size="184,90" aspect="true"/>
+    <image id="n11_z6mt" name="n11" src="z6mthr" fileName="screen/game/images/vs.png" xy="460,126">
+      <relation target="n6_z6mt" sidePair="center-center,middle-middle"/>
+    </image>
+    <text id="n16_z6mt" name="n16" xy="277,50" size="129,29" fontSize="20" color="#ffffff" autoSize="none" underline="true" italic="true" singleLine="true" text="生命值:           "/>
+    <text id="n17_z6mt" name="n17" xy="612,229" size="129,29" fontSize="20" color="#ffffff" autoSize="none" underline="true" italic="true" singleLine="true" text="           :防御力"/>
+    <text id="n18_z6mt" name="n18" xy="612,139" size="129,29" fontSize="20" color="#ffffff" autoSize="none" underline="true" italic="true" singleLine="true" text="           :攻击力"/>
+    <text id="n19_z6mt" name="n19" xy="612,49" size="125,29" fontSize="20" color="#ffffff" underline="true" italic="true" singleLine="true" text="           :生命值"/>
+    <text id="n23_z6mt" name="n23" xy="277,229" size="129,29" fontSize="20" color="#ffffff" autoSize="none" underline="true" italic="true" singleLine="true" text="防御力:           "/>
+    <text id="n24_z6mt" name="n24" xy="277,139" size="129,29" fontSize="20" color="#ffffff" autoSize="none" underline="true" italic="true" singleLine="true" text="攻击力:           "/>
+    <text id="n28_z6mt" name="life" xy="271,83" size="135,50" font="ui://n1eyqnayb9orf5" fontSize="30" color="#ffffff" align="right" vAlign="middle" autoSize="none" singleLine="true" text="1000"/>
+    <text id="n29_z6mt" name="attack" xy="271,173" size="135,50" font="ui://n1eyqnayb9orf5" fontSize="30" color="#ffffff" align="right" vAlign="middle" autoSize="none" singleLine="true" text="1000"/>
+    <text id="n30_z6mt" name="defense" xy="271,263" size="135,50" font="ui://n1eyqnayb9orf5" fontSize="30" color="#ffffff" align="right" vAlign="middle" autoSize="none" singleLine="true" text="1000"/>
+    <text id="n31_z6mt" name="myLife" xy="612,83" size="135,50" font="ui://n1eyqnayb9orf5" fontSize="30" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" text="1000"/>
+    <text id="n32_z6mt" name="myAttack" xy="612,173" size="135,50" font="ui://n1eyqnayb9orf5" fontSize="30" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" text="1000"/>
+    <text id="n33_z6mt" name="myDefense" xy="612,263" size="135,50" font="ui://n1eyqnayb9orf5" fontSize="30" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" text="1000"/>
+    <image id="n15_z6mt" name="n15" src="z6mths" fileName="screen/game/images/3.png" xy="181,101">
+      <gearDisplay controller="type" pages="1"/>
+    </image>
+  </displayList>
+</component>

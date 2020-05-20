@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750">
   <displayList>
-    <image id="n6_b9or" name="n6" src="b9orfo" fileName="screen/home/images/explains.png" xy="0,0" size="1334,750"/>
+    <image id="n6_b9or" name="n6" src="b9orfo" fileName="screen/home/images/explains.png" xy="0,0" size="1334,750">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
     <component id="n8_aie1" name="btnClose" src="prsq2" fileName="common/button/CommonIconBtn.xml" xy="1114,89" size="49,46">
+      <relation target="" sidePair="center-center,middle-middle"/>
       <Button icon="ui://n1eyqnayaie1fp"/>
     </component>
   </displayList>

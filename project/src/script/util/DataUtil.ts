@@ -2,6 +2,7 @@ import Player from "./PlayerUtil";
 
 const event: Array<any> = require('../data/event.json').list;
 const map: Array<any> = require('../data/map.json').list;
+const monster: Array<any> = require('../data/monster.json').list;
 export class DataUtil {
     public static player: Player;
     public static getMap(layer: number) {
@@ -102,5 +103,9 @@ export class DataUtil {
             }
         }
         return arr;
+    }
+
+    public static getMonsterInformationById(id: number) {
+        return monster.filter(a => a.id == id)[0];
     }
 }

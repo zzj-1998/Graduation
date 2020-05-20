@@ -14,6 +14,7 @@ import { PropUtil } from "../util/PropUtil";
 import { IsWxUtil, WxUtil } from "../util/IsWxUtil";
 import { FlyUtil } from "../util/FlyUtil";
 import { FlyMsgBox } from "../wnd/FlyMsgBox";
+import { FightWnd } from "../wnd/FightWnd";
 
 export default class GameScreen extends ui.game.gameUI {
     private _view: UI_GameScreen;
@@ -44,7 +45,10 @@ export default class GameScreen extends ui.game.gameUI {
         this.initMapList();
         this.initOperation();
         this._walking = false;
-        this._view.m_btnSave.onClick(this, this.saveNow);
+        this._view.m_btnSave.onClick(this, ()=>{
+            this.saveNow();
+            FlyMsgBox.showTip("保存成功")
+        });
         this._view.m_blood_red.onClick(this, this._useBloodRed);
         this._view.m_blood_blue.onClick(this, this._useBloodBlue);
     }
@@ -504,11 +508,14 @@ export default class GameScreen extends ui.game.gameUI {
     protected _judgeMonster(index: number) {
         for (let i = 0; i < DataUtil.player.map[DataUtil.player.layer].monsterIndex.length; i++) {
             if (index == DataUtil.player.map[DataUtil.player.layer].monsterIndex[i]) {
-                //to do 战斗
-                this._view.m_mapList._children[index].asCom.getChildAt(1).asCom.removeFromParent();
-                //战斗后
-                DataUtil.player.map[DataUtil.player.layer].monsterIndex.splice(i, 1);
-                DataUtil.player.map[DataUtil.player.layer].monster.splice(i, 1);
+                FightWnd.startFight(DataUtil.player.map[DataUtil.player.layer].monster[i], ()=>{
+                    //战斗后
+                    this._view.m_mapList._children[index].asCom.getChildAt(1).asCom.removeFromParent();
+                    DataUtil.player.map[DataUtil.player.layer].monsterIndex.splice(i, 1);
+                    DataUtil.player.map[DataUtil.player.layer].monster.splice(i, 1);
+                    this.flushPlayerPanel();
+                });
+                this._moveReturn();
                 return true;
             }
         }

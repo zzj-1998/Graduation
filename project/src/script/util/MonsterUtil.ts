@@ -110,5 +110,73 @@ export class MonsterUtil {
 
 
 
+
+
+    }
+    static getMonsterURLById(id: number) {
+        switch(id) {
+            case 1:
+                return UI_Monster01.URL;
+            case 2:
+                return UI_Monster02.URL;
+            case 3:
+                return UI_Monster03.URL;
+            case 4:
+                return UI_Monster04.URL;
+            case 5:
+                return UI_Monster05.URL;
+            case 6:
+                return UI_Monster06.URL;
+            case 7:
+                return UI_Monster07.URL;
+            case 8:
+                return UI_Monster08.URL;
+            case 9:
+                return UI_Monster09.URL;
+            case 10:
+                return UI_Monster10.URL;
+            case 11:
+                return UI_Monster11.URL;
+            case 12:
+                return UI_Monster12.URL;
+            case 13:
+                return UI_Monster13.URL;
+            case 14:
+                return UI_Monster14.URL;
+            case 15:
+                return UI_Monster15.URL;
+            case 16:
+                return UI_Monster16.URL;
+            case 17:
+                return UI_Monster17.URL;
+            case 18:
+                return UI_Monster18.URL;
+            case 19:
+                return UI_Monster19.URL;
+            case 20:
+                return UI_Monster20.URL;
+            case 21:
+                return UI_Monster21.URL;
+            case 22:
+                return UI_Monster22.URL;
+            case 25:
+                return UI_Monster25.URL;
+            case 26:
+                return UI_Monster26.URL;
+            case 27:
+                return UI_Monster27.URL;
+            case 28:
+                return UI_Monster28.URL;
+            case 30:
+                return UI_Monster30.URL;
+            case 32:
+                return UI_Monster32.URL;
+            case 33:
+                return UI_Monster33.URL;
+            case 34:
+                return UI_Monster34.URL;
+            case 35:
+                return UI_Monster35.URL;
+        }
     }
 }

@@ -16,7 +16,9 @@ export class FlyMsgBox extends UI_MsgBox {
 		this.y = Laya.stage.height / 2;//这里可以控制飞起的高度位置
 		this.alpha = 1;
 		this.m_txt.text = msg;
-		Laya.Tween.to(this, { y: this.y - 200, alpha: 0 }, 1600)
+		Laya.Tween.to(this, { y: this.y - 200, alpha: 0 }, 1600, Laya.Ease.linearIn, Laya.Handler.create(this, () => {
+			this.recover();
+		}))
 	}
 
 	public recover() {
@@ -29,7 +31,7 @@ export class FlyMsgBox extends UI_MsgBox {
 
 	/** FlyMsgBox.showTip("") */
 	static showTip(msg: string) {
-		let temp = FlyMsgBox.create();
+		let temp = this.create();
 		fairygui.GRoot.inst.addChild(temp);
 		temp.show(msg);
 	}

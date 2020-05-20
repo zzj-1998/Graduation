@@ -67,6 +67,7 @@ import UI_UpStairs from "./UI_UpStairs";
 import UI_DownStairs from "./UI_DownStairs";
 import UI_OperationComp from "./UI_OperationComp";
 import UI_Monster22 from "./UI_Monster22";
+import UI_FightWnd from "./UI_FightWnd";
 
 export default class MainBinder {
 	public static bindAll():void {
@@ -137,5 +138,6 @@ export default class MainBinder {
 		fgui.UIObjectFactory.setExtension(UI_DownStairs.URL, UI_DownStairs);
 		fgui.UIObjectFactory.setExtension(UI_OperationComp.URL, UI_OperationComp);
 		fgui.UIObjectFactory.setExtension(UI_Monster22.URL, UI_Monster22);
+		fgui.UIObjectFactory.setExtension(UI_FightWnd.URL, UI_FightWnd);
 	}
 }

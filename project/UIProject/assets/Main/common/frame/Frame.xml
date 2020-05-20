@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="384,384" extention="Label">
   <displayList>
-    <graph id="n0_jt4o" name="n0" xy="0,0" size="384,384" type="rect" lineSize="4" lineColor="#ffe77504" fillColor="#00ffffff" corner="5"/>
+    <graph id="n0_jt4o" name="n0" xy="0,0" size="384,384" type="rect" lineSize="4" lineColor="#ffe77504" fillColor="#00ffffff" corner="5">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
   </displayList>
 </component>

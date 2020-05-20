@@ -5,7 +5,7 @@
       <relation target="" sidePair="width-width,height-height"/>
     </image>
     <component id="n2_z4k5" name="operation" src="z4k5gd" fileName="operation/OperationComp.xml" xy="32,536" controller="type,0">
-      <relation target="" sidePair="left-left,bottom-top"/>
+      <relation target="" sidePair="center-center,middle-middle,left-left,bottom-top"/>
     </component>
     <list id="n0_aie1" name="mapList" xy="326,24" size="704,704" layout="flow_hz" overflow="hidden" lineItemCount="11" defaultItem="ui://n1eyqnayaie1fr" autoClearItems="true">
       <relation target="" sidePair="center-center,middle-middle"/>
@@ -131,28 +131,28 @@
       <item/>
       <item/>
     </list>
-    <loader id="n4_tddr" name="n4" xy="326,24" size="704,704" url="ui://n1eyqnayjt4oge" fill="scale">
+    <loader id="n4_tddr" name="n4" xy="325,24" size="704,704" url="ui://n1eyqnayjt4oge" fill="scale">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
     <component id="n5_h6hq" name="panel" src="h6hqgj" fileName="comp/attribute/PanelComp.xml" xy="22,64">
-      <relation target="" sidePair="left-left,top-top"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n11_h6hq" name="keyPanel" src="h6hqgq" fileName="comp/key/KeyPanelComp.xml" xy="1062,379">
-      <relation target="" sidePair="middle-middle,right-right"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n12_h6hq" name="layer" src="h6hqgl" fileName="comp/layer/LayerComp.xml" xy="1062,571" controller="type,0">
-      <relation target="" sidePair="middle-middle,left-right"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </component>
     <component id="n15_h6hq" name="btnSave" src="prsq2" fileName="common/button/CommonIconBtn.xml" xy="1062,642" size="256,64">
-      <relation target="" sidePair="middle-middle,right-right"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
       <Button icon="ui://n1eyqnayh6hqgk"/>
     </component>
     <component id="n27_o84p" name="blood_red" src="h6hqgr" fileName="comp/knapsack/KnapsackComp.xml" xy="1119,85" controller="nums,0,gray,0,type,0">
-      <relation target="" sidePair="right-right,top-top"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
       <ProgressBar max="100"/>
     </component>
     <component id="n28_o84p" name="blood_blue" src="h6hqgr" fileName="comp/knapsack/KnapsackComp.xml" xy="1183,85" controller="nums,0,gray,0,type,1">
-      <relation target="" sidePair="right-right,top-top"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
       <ProgressBar max="100"/>
     </component>
   </displayList>

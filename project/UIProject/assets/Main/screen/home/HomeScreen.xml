@@ -5,15 +5,18 @@
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
     <image id="n0_prsq" name="n0" src="g0ajhi" fileName="screen/home/images/bg.png" xy="281,0" size="710,393" aspect="true">
-      <relation target="" sidePair="center-center,top-top"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
     </image>
     <component id="n3_bhkz" name="btnExplain" src="prsq2" fileName="common/button/CommonIconBtn.xml" xy="450,500" size="393,110">
+      <relation target="" sidePair="center-center,middle-middle"/>
       <Button icon="ui://n1eyqnayprsq3"/>
     </component>
     <component id="n4_bhkz" name="btnStart" src="prsq2" fileName="common/button/CommonIconBtn.xml" xy="450,350" size="393,110">
+      <relation target="" sidePair="center-center,middle-middle"/>
       <Button icon="ui://n1eyqnayprsq5"/>
     </component>
     <component id="n5_bhkz" name="btnLeave" src="prsq2" fileName="common/button/CommonIconBtn.xml" xy="450,650" size="393,110">
+      <relation target="" sidePair="center-center,middle-middle"/>
       <Button icon="ui://n1eyqnayprsq4"/>
     </component>
   </displayList>
