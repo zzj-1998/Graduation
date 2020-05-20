@@ -37,9 +37,8 @@ export default class GameScreen extends ui.game.gameUI {
         //     DataUtil.player = Laya.LocalStorage.getJSON('data');
         // }
         // else {
-        DataUtil.player = new Player();
-        DataUtil.player.init();
-        DataUtil.player.layer = 1;
+            DataUtil.player = new Player();
+            DataUtil.player.init();
         // }
         this.initPanel();
         this.initMapList();
@@ -209,43 +208,44 @@ export default class GameScreen extends ui.game.gameUI {
         this._view.m_operation.getChild('btnLeft').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartLeft);
     }
 
-    protected _moveStartUp() {
+    protected _beforeMove() {
         this._view.m_operation.getChild('btnUp').asGraph.off(Laya.Event.MOUSE_DOWN, this, this._moveStartUp);
-        this._view.m_operation.getChild('btnUp').asGraph.on(Laya.Event.MOUSE_MOVE, this, this._moveUp);
-        this._view.m_operation.getChild('btnUp').asGraph.on(Laya.Event.MOUSE_OUT, this, this._moveReturn);
-        this._view.m_operation.getChild('btnUp').asGraph.on(Laya.Event.MOUSE_UP, this, this._moveReturn);
+        this._view.m_operation.getChild('btnDown').asGraph.off(Laya.Event.MOUSE_DOWN, this, this._moveStartDown);
+        this._view.m_operation.getChild('btnRight').asGraph.off(Laya.Event.MOUSE_DOWN, this, this._moveStartRight);
+        this._view.m_operation.getChild('btnLeft').asGraph.off(Laya.Event.MOUSE_DOWN, this, this._moveStartLeft);
+        this._view.m_operation.on(Laya.Event.MOUSE_OUT, this, this._moveReturn);
+        this._view.m_operation.on(Laya.Event.MOUSE_UP, this, this._moveReturn);
+        this._view.m_operation.getChild('btnUp').asGraph.on(Laya.Event.MOUSE_OVER, this, this._moveUp);
+        this._view.m_operation.getChild('btnDown').asGraph.on(Laya.Event.MOUSE_OVER, this, this._moveDown);
+        this._view.m_operation.getChild('btnRight').asGraph.on(Laya.Event.MOUSE_OVER, this, this._moveRight);
+        this._view.m_operation.getChild('btnLeft').asGraph.on(Laya.Event.MOUSE_OVER, this, this._moveLeft);
+    }
+
+    protected _moveStartUp() {
+        this._beforeMove();
         this._moveUp();
     }
 
     protected _moveStartDown() {
-        this._view.m_operation.getChild('btnDown').asGraph.off(Laya.Event.MOUSE_DOWN, this, this._moveStartDown);
-        this._view.m_operation.getChild('btnDown').asGraph.on(Laya.Event.MOUSE_MOVE, this, this._moveDown);
-        this._view.m_operation.getChild('btnDown').asGraph.on(Laya.Event.MOUSE_OUT, this, this._moveReturn);
-        this._view.m_operation.getChild('btnDown').asGraph.on(Laya.Event.MOUSE_UP, this, this._moveReturn);
+        this._beforeMove();
         this._moveDown();
     }
 
     protected _moveStartRight() {
-        this._view.m_operation.getChild('btnRight').asGraph.off(Laya.Event.MOUSE_DOWN, this, this._moveStartRight);
-        this._view.m_operation.getChild('btnRight').asGraph.on(Laya.Event.MOUSE_MOVE, this, this._moveRight);
-        this._view.m_operation.getChild('btnRight').asGraph.on(Laya.Event.MOUSE_OUT, this, this._moveReturn);
-        this._view.m_operation.getChild('btnRight').asGraph.on(Laya.Event.MOUSE_UP, this, this._moveReturn);
+        this._beforeMove();
         this._moveRight();
     }
 
     protected _moveStartLeft() {
-        this._view.m_operation.getChild('btnLeft').asGraph.off(Laya.Event.MOUSE_DOWN, this, this._moveStartLeft);
-        this._view.m_operation.getChild('btnLeft').asGraph.on(Laya.Event.MOUSE_MOVE, this, this._moveLeft);
-        this._view.m_operation.getChild('btnLeft').asGraph.on(Laya.Event.MOUSE_OUT, this, this._moveReturn);
-        this._view.m_operation.getChild('btnLeft').asGraph.on(Laya.Event.MOUSE_UP, this, this._moveReturn);
+        this._beforeMove();
         this._moveLeft();
     }
 
     protected _moveUp() {
         this._view.m_operation.getController('type').selectedIndex = 1;
+        if (this._walking) return;
         if (this._judgeCharacterUp(DataUtil.player.characterIndex, DataUtil.player.characterIndex - 11)) {
             if (this._judgeCollision(DataUtil.player.characterIndex - 11)) return;
-            if (this._walking) return;
             this._walking = true;
             this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom.getTransition('back').play();
             Laya.Tween.to(this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom, { y: -64 }, 330, Laya.Ease.linearIn, Laya.Handler.create(this, () => {
@@ -256,15 +256,16 @@ export default class GameScreen extends ui.game.gameUI {
                 this._view.m_mapList._children[DataUtil.player.characterIndex - 11].asCom.addChild(character);
                 DataUtil.player.characterIndex -= 11;
                 this._walking = false;
+                this._walkNext();
             }));
         }
     }
 
     protected _moveDown() {
         this._view.m_operation.getController('type').selectedIndex = 2;
+        if (this._walking) return;
         if (this._judgeCharacterDown(DataUtil.player.characterIndex, DataUtil.player.characterIndex + 11)) {
             if (this._judgeCollision(DataUtil.player.characterIndex + 11)) return;
-            if (this._walking) return;
             this._walking = true;
             this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom.removeFromParent();
             let character = <UI_character>fairygui.UIPackage.createObjectFromURL(UI_character.URL, UI_character);
@@ -275,15 +276,16 @@ export default class GameScreen extends ui.game.gameUI {
             Laya.Tween.to(this._view.m_mapList._children[DataUtil.player.characterIndex + 11].asCom.getChildAt(1).asCom, { y: 0 }, 330, Laya.Ease.linearIn, Laya.Handler.create(this, () => {
                 DataUtil.player.characterIndex += 11;
                 this._walking = false;
+                this._walkNext();
             }));
         }
     }
 
     protected _moveRight() {
         this._view.m_operation.getController('type').selectedIndex = 4;
+        if (this._walking) return;
         if (this._judgeCharacterRight(DataUtil.player.characterIndex, DataUtil.player.characterIndex + 1)) {
             if (this._judgeCollision(DataUtil.player.characterIndex + 1)) return;
-            if (this._walking) return;
             this._walking = true;
             this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom.removeFromParent();
             let character = <UI_character>fairygui.UIPackage.createObjectFromURL(UI_character.URL, UI_character);
@@ -294,15 +296,16 @@ export default class GameScreen extends ui.game.gameUI {
             Laya.Tween.to(this._view.m_mapList._children[DataUtil.player.characterIndex + 1].asCom.getChildAt(1).asCom, { x: 0 }, 330, Laya.Ease.linearIn, Laya.Handler.create(this, () => {
                 DataUtil.player.characterIndex += 1;
                 this._walking = false;
+                this._walkNext();
             }));
         }
     }
 
     protected _moveLeft() {
         this._view.m_operation.getController('type').selectedIndex = 3;
+        if (this._walking) return;
         if (this._judgeCharacterLeft(DataUtil.player.characterIndex, DataUtil.player.characterIndex - 1)) {
             if (this._judgeCollision(DataUtil.player.characterIndex - 1)) return;
-            if (this._walking) return;
             this._walking = true;
             this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom.getTransition('left').play();
             Laya.Tween.to(this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom, { x: -64 }, 330, Laya.Ease.linearIn, Laya.Handler.create(this, () => {
@@ -313,27 +316,39 @@ export default class GameScreen extends ui.game.gameUI {
                 this._view.m_mapList._children[DataUtil.player.characterIndex - 1].asCom.addChild(character);
                 DataUtil.player.characterIndex -= 1;
                 this._walking = false;
+                this._walkNext();
             }));
         }
     }
 
+    protected _walkNext() {
+        switch (this._view.m_operation.getController('type').selectedIndex) {
+            case 1:
+                this._moveUp();
+                break;
+            case 2:
+                this._moveDown();
+                break;
+            case 3:
+                this._moveLeft();
+                break;
+            case 4:
+                this._moveRight();
+                break;
+        }
+    }
+
     protected _moveReturn() {
-        this._view.m_operation.getChild('btnUp').asGraph.off(Laya.Event.MOUSE_MOVE, this, this._moveUp);
-        this._view.m_operation.getChild('btnUp').asGraph.off(Laya.Event.MOUSE_OUT, this, this._moveReturn);
-        this._view.m_operation.getChild('btnUp').asGraph.off(Laya.Event.MOUSE_UP, this, this._moveReturn);
-        this._view.m_operation.getChild('btnDown').asGraph.off(Laya.Event.MOUSE_MOVE, this, this._moveDown);
-        this._view.m_operation.getChild('btnDown').asGraph.off(Laya.Event.MOUSE_OUT, this, this._moveReturn);
-        this._view.m_operation.getChild('btnDown').asGraph.off(Laya.Event.MOUSE_UP, this, this._moveReturn);
-        this._view.m_operation.getChild('btnRight').asGraph.off(Laya.Event.MOUSE_MOVE, this, this._moveRight);
-        this._view.m_operation.getChild('btnRight').asGraph.off(Laya.Event.MOUSE_OUT, this, this._moveReturn);
-        this._view.m_operation.getChild('btnRight').asGraph.off(Laya.Event.MOUSE_UP, this, this._moveReturn);
-        this._view.m_operation.getChild('btnLeft').asGraph.off(Laya.Event.MOUSE_MOVE, this, this._moveLeft);
-        this._view.m_operation.getChild('btnLeft').asGraph.off(Laya.Event.MOUSE_OUT, this, this._moveReturn);
-        this._view.m_operation.getChild('btnLeft').asGraph.off(Laya.Event.MOUSE_UP, this, this._moveReturn);
+        this._view.m_operation.off(Laya.Event.MOUSE_OUT, this, this._moveReturn);
+        this._view.m_operation.off(Laya.Event.MOUSE_UP, this, this._moveReturn);
         this._view.m_operation.getChild('btnUp').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartUp);
         this._view.m_operation.getChild('btnDown').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartDown);
         this._view.m_operation.getChild('btnRight').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartRight);
         this._view.m_operation.getChild('btnLeft').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartLeft);
+        this._view.m_operation.getChild('btnUp').asGraph.off(Laya.Event.MOUSE_OVER, this, this._moveUp);
+        this._view.m_operation.getChild('btnDown').asGraph.off(Laya.Event.MOUSE_OVER, this, this._moveDown);
+        this._view.m_operation.getChild('btnRight').asGraph.off(Laya.Event.MOUSE_OVER, this, this._moveRight);
+        this._view.m_operation.getChild('btnLeft').asGraph.off(Laya.Event.MOUSE_OVER, this, this._moveLeft);
         this._view.m_operation.getController('type').selectedIndex = 0;
     }
 
@@ -471,11 +486,12 @@ export default class GameScreen extends ui.game.gameUI {
                 if (DoorUtil.judgeOpenDoorOrNot(DataUtil.player.map[DataUtil.player.layer].door[i])) {
                     this.flushPlayerPanel();
                     this._walking = true;
+                    DataUtil.player.map[DataUtil.player.layer].doorIndex.splice(i, 1);
+                    DataUtil.player.map[DataUtil.player.layer].door.splice(i, 1);
                     this._view.m_mapList._children[index].asCom.getChildAt(1).asCom.getTransition("common").play(Laya.Handler.create(this, () => {
                         this._walking = false;
                         this._view.m_mapList._children[index].asCom.getChildAt(1).asCom.removeFromParent();
-                        DataUtil.player.map[DataUtil.player.layer].doorIndex.splice(i, 1);
-                        DataUtil.player.map[DataUtil.player.layer].door.splice(i, 1);
+                        this._walkNext();
                     }));
                 }
                 return true;

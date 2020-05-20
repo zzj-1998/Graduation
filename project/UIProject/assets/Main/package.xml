@@ -110,20 +110,15 @@
     <component id="bhkz9t" name="Monster19.xml" path="/ani/monster/" exported="true"/>
     <component id="bhkz9u" name="Monster20.xml" path="/ani/monster/" exported="true"/>
     <component id="bhkz9v" name="Monster21.xml" path="/ani/monster/" exported="true"/>
-    <component id="bhkz9w" name="Monster22.xml" path="/ani/monster/" exported="true"/>
-    <component id="bhkz9x" name="Monster23.xml" path="/ani/monster/" exported="true"/>
     <component id="bhkz9z" name="Monster25.xml" path="/ani/monster/" exported="true"/>
     <component id="bhkza0" name="Monster26.xml" path="/ani/monster/" exported="true"/>
     <component id="bhkza1" name="Monster27.xml" path="/ani/monster/" exported="true"/>
     <component id="bhkza2" name="Monster28.xml" path="/ani/monster/" exported="true"/>
-    <component id="bhkza3" name="Monster29.xml" path="/ani/monster/" exported="true"/>
     <component id="bhkza4" name="Monster30.xml" path="/ani/monster/" exported="true"/>
-    <component id="bhkza5" name="Monster31.xml" path="/ani/monster/" exported="true"/>
     <component id="bhkza6" name="Monster32.xml" path="/ani/monster/" exported="true"/>
     <component id="bhkza7" name="Monster33.xml" path="/ani/monster/" exported="true"/>
     <component id="bhkza8" name="Monster34.xml" path="/ani/monster/" exported="true"/>
     <component id="bhkza9" name="Monster35.xml" path="/ani/monster/" exported="true"/>
-    <component id="bhkzaa" name="Monster36.xml" path="/ani/monster/" exported="true"/>
     <image id="bhkzah" name="Monster09-01_05.png" path="/ani/monster/images/"/>
     <image id="bhkzai" name="Monster09-01_06.png" path="/ani/monster/images/"/>
     <image id="bhkzaj" name="Monster09-01_07.png" path="/ani/monster/images/"/>
@@ -136,10 +131,6 @@
     <image id="bhkzaq" name="Monster11-01_02.png" path="/ani/monster/images/"/>
     <image id="bhkzar" name="Monster11-01_03.png" path="/ani/monster/images/"/>
     <image id="bhkzas" name="Monster11-01_04.png" path="/ani/monster/images/"/>
-    <image id="bhkzat" name="Monster11-01_05.png" path="/ani/monster/images/"/>
-    <image id="bhkzau" name="Monster11-01_06.png" path="/ani/monster/images/"/>
-    <image id="bhkzav" name="Monster11-01_07.png" path="/ani/monster/images/"/>
-    <image id="bhkzaw" name="Monster11-01_08.png" path="/ani/monster/images/"/>
     <image id="bhkzax" name="Monster01-01_01.png" path="/ani/monster/images/"/>
     <image id="bhkzay" name="Monster01-01_02.png" path="/ani/monster/images/"/>
     <image id="bhkzaz" name="Monster01-01_03.png" path="/ani/monster/images/"/>
@@ -224,18 +215,6 @@
     <image id="bhkzdq" name="Monster06-01_14.png" path="/ani/monster/images/"/>
     <image id="bhkzdr" name="Monster06-01_15.png" path="/ani/monster/images/"/>
     <image id="bhkzds" name="Monster06-01_16.png" path="/ani/monster/images/"/>
-    <image id="bhkzdt" name="Monster06-03_01.png" path="/ani/monster/images/"/>
-    <image id="bhkzdu" name="Monster06-03_02.png" path="/ani/monster/images/"/>
-    <image id="bhkzdv" name="Monster06-03_03.png" path="/ani/monster/images/"/>
-    <image id="bhkzdw" name="Monster06-03_04.png" path="/ani/monster/images/"/>
-    <image id="bhkzdx" name="Monster06-03_05.png" path="/ani/monster/images/"/>
-    <image id="bhkzdy" name="Monster06-03_06.png" path="/ani/monster/images/"/>
-    <image id="bhkzdz" name="Monster06-03_07.png" path="/ani/monster/images/"/>
-    <image id="bhkze0" name="Monster06-03_08.png" path="/ani/monster/images/"/>
-    <image id="bhkze1" name="Monster06-03_09.png" path="/ani/monster/images/"/>
-    <image id="bhkze2" name="Monster06-03_10.png" path="/ani/monster/images/"/>
-    <image id="bhkze3" name="Monster06-03_11.png" path="/ani/monster/images/"/>
-    <image id="bhkze4" name="Monster06-03_12.png" path="/ani/monster/images/"/>
     <image id="bhkze9" name="Monster06-05_01.png" path="/ani/monster/images/"/>
     <image id="bhkzea" name="Monster06-05_02.png" path="/ani/monster/images/"/>
     <image id="bhkzeb" name="Monster06-05_03.png" path="/ani/monster/images/"/>
@@ -252,18 +231,10 @@
     <image id="bhkzem" name="Monster07-04_02.png" path="/ani/monster/images/"/>
     <image id="bhkzen" name="Monster07-04_03.png" path="/ani/monster/images/"/>
     <image id="bhkzeo" name="Monster07-04_04.png" path="/ani/monster/images/"/>
-    <image id="bhkzep" name="Monster07-04_05.png" path="/ani/monster/images/"/>
-    <image id="bhkzeq" name="Monster07-04_06.png" path="/ani/monster/images/"/>
-    <image id="bhkzer" name="Monster07-04_07.png" path="/ani/monster/images/"/>
-    <image id="bhkzes" name="Monster07-04_08.png" path="/ani/monster/images/"/>
     <image id="bhkzet" name="Monster08-01_01.png" path="/ani/monster/images/"/>
     <image id="bhkzeu" name="Monster08-01_02.png" path="/ani/monster/images/"/>
     <image id="bhkzev" name="Monster08-01_03.png" path="/ani/monster/images/"/>
     <image id="bhkzew" name="Monster08-01_04.png" path="/ani/monster/images/"/>
-    <image id="bhkzex" name="Monster08-01_09.png" path="/ani/monster/images/"/>
-    <image id="bhkzey" name="Monster08-01_10.png" path="/ani/monster/images/"/>
-    <image id="bhkzez" name="Monster08-01_11.png" path="/ani/monster/images/"/>
-    <image id="bhkzf0" name="Monster08-01_12.png" path="/ani/monster/images/"/>
     <image id="bhkzf1" name="Monster09-01_01.png" path="/ani/monster/images/"/>
     <image id="bhkzf2" name="Monster09-01_02.png" path="/ani/monster/images/"/>
     <image id="bhkzf3" name="Monster09-01_03.png" path="/ani/monster/images/"/>
@@ -331,6 +302,11 @@
     <component id="g43ehe" name="Stone_Defense.xml" path="/ani/prop/" exported="true"/>
     <component id="nfqthf" name="TransitionWnd.xml" path="/screen/game/" exported="true"/>
     <image id="g0ajhi" name="bg.png" path="/screen/home/images/" scale9grid="353,160,16,9"/>
+    <image id="z6mthj" name="Monster08-02_05.png" path="/ani/monster/images/"/>
+    <image id="z6mthk" name="Monster08-02_06.png" path="/ani/monster/images/"/>
+    <image id="z6mthl" name="Monster08-02_07.png" path="/ani/monster/images/"/>
+    <image id="z6mthm" name="Monster08-02_08.png" path="/ani/monster/images/"/>
+    <component id="z6mthn" name="Monster22.xml" path="/ani/monster/" exported="true"/>
   </resources>
   <publish name="Main" genCode="true"/>
 </packageDescription>

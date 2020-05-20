@@ -20,22 +20,19 @@ import UI_Monster19 from "../../ui/Main/UI_Monster19";
 import UI_Monster20 from "../../ui/Main/UI_Monster20";
 import UI_Monster21 from "../../ui/Main/UI_Monster21";
 import UI_Monster22 from "../../ui/Main/UI_Monster22";
-import UI_Monster23 from "../../ui/Main/UI_Monster23";
 import UI_Monster25 from "../../ui/Main/UI_Monster25";
 import UI_Monster26 from "../../ui/Main/UI_Monster26";
 import UI_Monster27 from "../../ui/Main/UI_Monster27";
 import UI_Monster28 from "../../ui/Main/UI_Monster28";
-import UI_Monster29 from "../../ui/Main/UI_Monster29";
 import UI_Monster30 from "../../ui/Main/UI_Monster30";
-import UI_Monster31 from "../../ui/Main/UI_Monster31";
 import UI_Monster32 from "../../ui/Main/UI_Monster32";
 import UI_Monster33 from "../../ui/Main/UI_Monster33";
 import UI_Monster34 from "../../ui/Main/UI_Monster34";
 import UI_Monster35 from "../../ui/Main/UI_Monster35";
-import UI_Monster36 from "../../ui/Main/UI_Monster36";
 
 export class MonsterUtil {
 
+    // 无23 24 29 31
     static getMonsterById(id: number) {
         switch(id) {
             case 1:
@@ -82,8 +79,6 @@ export class MonsterUtil {
                 return <UI_Monster21>fairygui.UIPackage.createObjectFromURL(UI_Monster21.URL, UI_Monster21);
             case 22:
                 return <UI_Monster22>fairygui.UIPackage.createObjectFromURL(UI_Monster22.URL, UI_Monster22);
-            case 23:
-                return <UI_Monster23>fairygui.UIPackage.createObjectFromURL(UI_Monster23.URL, UI_Monster23);
             case 25:
                 return <UI_Monster25>fairygui.UIPackage.createObjectFromURL(UI_Monster25.URL, UI_Monster25);
             case 26:
@@ -92,12 +87,8 @@ export class MonsterUtil {
                 return <UI_Monster27>fairygui.UIPackage.createObjectFromURL(UI_Monster27.URL, UI_Monster27);
             case 28:
                 return <UI_Monster28>fairygui.UIPackage.createObjectFromURL(UI_Monster28.URL, UI_Monster28);
-            case 29:
-                return <UI_Monster29>fairygui.UIPackage.createObjectFromURL(UI_Monster29.URL, UI_Monster29);
             case 30:
                 return <UI_Monster30>fairygui.UIPackage.createObjectFromURL(UI_Monster30.URL, UI_Monster30);
-            case 31:
-                return <UI_Monster31>fairygui.UIPackage.createObjectFromURL(UI_Monster31.URL, UI_Monster31);
             case 32:
                 return <UI_Monster32>fairygui.UIPackage.createObjectFromURL(UI_Monster32.URL, UI_Monster32);
             case 33:
@@ -106,8 +97,6 @@ export class MonsterUtil {
                 return <UI_Monster34>fairygui.UIPackage.createObjectFromURL(UI_Monster34.URL, UI_Monster34);
             case 35:
                 return <UI_Monster35>fairygui.UIPackage.createObjectFromURL(UI_Monster35.URL, UI_Monster35);
-            case 36:
-                return <UI_Monster36>fairygui.UIPackage.createObjectFromURL(UI_Monster36.URL, UI_Monster36);
         }
 
 

@@ -39,7 +39,7 @@ export default class Player {
         this.gold = 0;
         this.experience = 0;
         this.layer = 0;
-        this.key = [1, 1, 1];
+        this.key = [41, 41, 41];
         this.blood_red = 0;
         this.blood_blue = 0;
         this.characterIndex = 0;

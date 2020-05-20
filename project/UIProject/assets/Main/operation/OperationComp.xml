@@ -5,9 +5,9 @@
     <loader id="n0_z4k5" name="operation" xy="0,0" size="192,192" url="ui://n1eyqnayz4k5ga" fill="scaleMatchWidth">
       <gearIcon controller="type" pages="1,2,3,4" values="ui://n1eyqnayz4k5gc|ui://n1eyqnayz4k5g8|ui://n1eyqnayz4k5g9|ui://n1eyqnayz4k5gb" default="ui://n1eyqnayz4k5ga"/>
     </loader>
-    <graph id="n1_z4k5" name="btnUp" xy="64,0" size="64,64" type="rect" lineColor="#00000000" fillColor="#00ffffff"/>
-    <graph id="n2_z4k5" name="btnDown" xy="64,128" size="64,64" type="rect" lineColor="#00000000" fillColor="#00ffffff"/>
-    <graph id="n3_z4k5" name="btnRight" xy="128,64" size="64,64" type="rect" lineColor="#00000000" fillColor="#00ffffff"/>
-    <graph id="n4_z4k5" name="btnLeft" xy="0,64" size="64,64" type="rect" lineColor="#00000000" fillColor="#00ffffff"/>
+    <graph id="n1_z4k5" name="btnUp" xy="64,0" size="128,96" type="polygon" lineColor="#00000000" fillColor="#000000ff" points="-64,0,128,0,32,96"/>
+    <graph id="n2_z4k5" name="btnDown" xy="64,128" size="128,64" type="polygon" lineColor="#00000000" fillColor="#00000066" points="32,-32,128,64,-64,64"/>
+    <graph id="n3_z4k5" name="btnRight" xy="128,64" size="64,128" type="polygon" lineColor="#00000000" fillColor="#00ffffff" points="64,-64,64,128,-32,32"/>
+    <graph id="n4_z4k5" name="btnLeft" xy="0,64" size="96,128" type="polygon" lineColor="#00000000" fillColor="#0000ff00" points="0,-64,96,32,0,128"/>
   </displayList>
 </component>

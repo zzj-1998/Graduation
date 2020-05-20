@@ -35,20 +35,15 @@ import UI_Monster18 from "./UI_Monster18";
 import UI_Monster19 from "./UI_Monster19";
 import UI_Monster20 from "./UI_Monster20";
 import UI_Monster21 from "./UI_Monster21";
-import UI_Monster22 from "./UI_Monster22";
-import UI_Monster23 from "./UI_Monster23";
 import UI_Monster25 from "./UI_Monster25";
 import UI_Monster26 from "./UI_Monster26";
 import UI_Monster27 from "./UI_Monster27";
 import UI_Monster28 from "./UI_Monster28";
-import UI_Monster29 from "./UI_Monster29";
 import UI_Monster30 from "./UI_Monster30";
-import UI_Monster31 from "./UI_Monster31";
 import UI_Monster32 from "./UI_Monster32";
 import UI_Monster33 from "./UI_Monster33";
 import UI_Monster34 from "./UI_Monster34";
 import UI_Monster35 from "./UI_Monster35";
-import UI_Monster36 from "./UI_Monster36";
 import UI_Blood_red from "./UI_Blood_red";
 import UI_Blood_blue from "./UI_Blood_blue";
 import UI_Stone_Attack from "./UI_Stone_Attack";
@@ -71,6 +66,7 @@ import UI_Key_red from "./UI_Key_red";
 import UI_UpStairs from "./UI_UpStairs";
 import UI_DownStairs from "./UI_DownStairs";
 import UI_OperationComp from "./UI_OperationComp";
+import UI_Monster22 from "./UI_Monster22";
 
 export default class MainBinder {
 	public static bindAll():void {
@@ -109,20 +105,15 @@ export default class MainBinder {
 		fgui.UIObjectFactory.setExtension(UI_Monster19.URL, UI_Monster19);
 		fgui.UIObjectFactory.setExtension(UI_Monster20.URL, UI_Monster20);
 		fgui.UIObjectFactory.setExtension(UI_Monster21.URL, UI_Monster21);
-		fgui.UIObjectFactory.setExtension(UI_Monster22.URL, UI_Monster22);
-		fgui.UIObjectFactory.setExtension(UI_Monster23.URL, UI_Monster23);
 		fgui.UIObjectFactory.setExtension(UI_Monster25.URL, UI_Monster25);
 		fgui.UIObjectFactory.setExtension(UI_Monster26.URL, UI_Monster26);
 		fgui.UIObjectFactory.setExtension(UI_Monster27.URL, UI_Monster27);
 		fgui.UIObjectFactory.setExtension(UI_Monster28.URL, UI_Monster28);
-		fgui.UIObjectFactory.setExtension(UI_Monster29.URL, UI_Monster29);
 		fgui.UIObjectFactory.setExtension(UI_Monster30.URL, UI_Monster30);
-		fgui.UIObjectFactory.setExtension(UI_Monster31.URL, UI_Monster31);
 		fgui.UIObjectFactory.setExtension(UI_Monster32.URL, UI_Monster32);
 		fgui.UIObjectFactory.setExtension(UI_Monster33.URL, UI_Monster33);
 		fgui.UIObjectFactory.setExtension(UI_Monster34.URL, UI_Monster34);
 		fgui.UIObjectFactory.setExtension(UI_Monster35.URL, UI_Monster35);
-		fgui.UIObjectFactory.setExtension(UI_Monster36.URL, UI_Monster36);
 		fgui.UIObjectFactory.setExtension(UI_Blood_red.URL, UI_Blood_red);
 		fgui.UIObjectFactory.setExtension(UI_Blood_blue.URL, UI_Blood_blue);
 		fgui.UIObjectFactory.setExtension(UI_Stone_Attack.URL, UI_Stone_Attack);
@@ -145,5 +136,6 @@ export default class MainBinder {
 		fgui.UIObjectFactory.setExtension(UI_UpStairs.URL, UI_UpStairs);
 		fgui.UIObjectFactory.setExtension(UI_DownStairs.URL, UI_DownStairs);
 		fgui.UIObjectFactory.setExtension(UI_OperationComp.URL, UI_OperationComp);
+		fgui.UIObjectFactory.setExtension(UI_Monster22.URL, UI_Monster22);
 	}
 }
