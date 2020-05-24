@@ -1,10 +1,46 @@
 import Player from "./PlayerUtil";
+import { IsWxUtil, WxUtil } from "./IsWxUtil";
 
 const event: Array<any> = require('../data/event.json').list;
 const map: Array<any> = require('../data/map.json').list;
 const monster: Array<any> = require('../data/monster.json').list;
 export class DataUtil {
     public static player: Player;
+    
+    public static initPlayer() {
+        this.player = new Player();
+        if (IsWxUtil.isWxEnvironment()) {
+            this.player.initByData(WxUtil.getData());
+        }
+        else {
+            // if (Laya.LocalStorage.getJSON('data')) {
+            //     this.player.initByData(Laya.LocalStorage.getJSON('data'));
+            // }
+            // else {
+                this.player.init();
+            // }
+        }
+    }
+
+    public static saveNow() {
+        if (IsWxUtil.isWxEnvironment()) {
+            WxUtil.saveNow(this.player);
+        }
+        else {
+            Laya.LocalStorage.setJSON("data", this.player);
+        }
+    }
+
+    public static removeNow() {
+        if (IsWxUtil.isWxEnvironment()) {
+            WxUtil.removeNow("data");
+        }
+        else {
+            Laya.LocalStorage.removeItem("data");
+        }
+        Laya.Scene.open("game/home.scene", true);
+    }
+
     public static getMap(layer: number) {
         return map.filter(a => a.layer == layer)[0];
     }

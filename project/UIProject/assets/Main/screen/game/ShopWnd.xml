@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="704,704">
+  <displayList>
+    <graph id="n1_qkss" name="n1" xy="102,102" size="500,500" group="n13_qkss" type="rect" fillColor="#ff010101"/>
+    <loader id="n3_qkss" name="n3" xy="102,102" size="500,500" group="n13_qkss" url="ui://n1eyqnayjt4oge" fill="scale">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <loader id="n14_ou2z" name="n14" xy="140,140" size="32,32" group="n13_qkss" scale="2,2" url="ui://n1eyqnayoyj7hv"/>
+    <text id="n4_qkss" name="n4" xy="221,140" size="352,64" group="n13_qkss" fontSize="23" color="#ffffff" text="想要增加你的能力吗？如果你有&#xA;25个金币，你可以任意选择一项："/>
+    <component id="n5_qkss" name="btnLife" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="112,210" size="480,50" group="n13_qkss">
+      <Button title="增加 800 点生命"/>
+    </component>
+    <component id="n6_qkss" name="btnAttack" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="112,270" size="480,50" group="n13_qkss">
+      <Button title="增加 4 点攻击"/>
+    </component>
+    <component id="n7_qkss" name="btnDefense" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="112,330" size="480,50" group="n13_qkss">
+      <Button title="增加 4 点防御"/>
+    </component>
+    <component id="n8_qkss" name="btnHit" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="112,390" size="480,50" group="n13_qkss">
+      <Button title="增加 0.2 点命中率"/>
+    </component>
+    <component id="n9_qkss" name="btnCrit" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="112,450" size="480,50" group="n13_qkss">
+      <Button title="增加 0.2 点暴击率"/>
+    </component>
+    <component id="n10_qkss" name="btnDodge" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="112,510" size="480,50" group="n13_qkss">
+      <Button title="增加 0.2 点闪避率"/>
+    </component>
+    <component id="n12_qkss" name="btnClose" src="prsq2" fileName="common/button/CommonIconBtn.xml" xy="549,111" size="43,46" group="n13_qkss" scale="0.6,0.6">
+      <Button icon="ui://n1eyqnayaie1fp"/>
+    </component>
+    <group id="n13_qkss" name="n13" xy="102,102" size="500,500" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

@@ -19,6 +19,7 @@ import { FightWnd } from "../wnd/FightWnd";
 export default class GameScreen extends ui.game.gameUI {
     private _view: UI_GameScreen;
     protected _walking: boolean;         //行走状态
+    protected _isFighting: boolean;      //战斗状态
     constructor() {
         super();
         var res: Array<any> = [
@@ -34,19 +35,14 @@ export default class GameScreen extends ui.game.gameUI {
         this._view = <UI_GameScreen>fairygui.UIPackage.createObjectFromURL(UI_GameScreen.URL, UI_GameScreen);
         this._view.makeFullScreen();
         fairygui.GRoot.inst.addChild(this._view);
-        // if (Laya.LocalStorage.getJSON('data')) {
-        //     DataUtil.player = Laya.LocalStorage.getJSON('data');
-        // }
-        // else {
-            DataUtil.player = new Player();
-            DataUtil.player.init();
-        // }
+        DataUtil.initPlayer();
         this.initPanel();
         this.initMapList();
         this.initOperation();
         this._walking = false;
+        this._isFighting = false;
         this._view.m_btnSave.onClick(this, ()=>{
-            this.saveNow();
+            DataUtil.saveNow();
             FlyMsgBox.showTip("保存成功")
         });
         this._view.m_blood_red.onClick(this, this._useBloodRed);
@@ -88,7 +84,7 @@ export default class GameScreen extends ui.game.gameUI {
             this._view.m_layer.getController('type').selectedIndex = 0;
         }
         this.flushKnapsack();
-        this.saveNow();
+        DataUtil.saveNow();
     }
 
     /** 刷新背包 */
@@ -343,12 +339,13 @@ export default class GameScreen extends ui.game.gameUI {
     }
 
     protected _moveReturn() {
+        this._moveStop();
+        this.initOperation();
+    }
+
+    protected _moveStop() {
         this._view.m_operation.off(Laya.Event.MOUSE_OUT, this, this._moveReturn);
         this._view.m_operation.off(Laya.Event.MOUSE_UP, this, this._moveReturn);
-        this._view.m_operation.getChild('btnUp').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartUp);
-        this._view.m_operation.getChild('btnDown').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartDown);
-        this._view.m_operation.getChild('btnRight').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartRight);
-        this._view.m_operation.getChild('btnLeft').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartLeft);
         this._view.m_operation.getChild('btnUp').asGraph.off(Laya.Event.MOUSE_OVER, this, this._moveUp);
         this._view.m_operation.getChild('btnDown').asGraph.off(Laya.Event.MOUSE_OVER, this, this._moveDown);
         this._view.m_operation.getChild('btnRight').asGraph.off(Laya.Event.MOUSE_OVER, this, this._moveRight);
@@ -436,7 +433,8 @@ export default class GameScreen extends ui.game.gameUI {
     protected _judgeNPC(index: number) {
         for (let i = 0; i < DataUtil.player.map[DataUtil.player.layer].npcIndex.length; i++) {
             if (index == DataUtil.player.map[DataUtil.player.layer].npcIndex[i]) {
-                //to do 对话系统
+                NPCUtil.judgeNPCEvent(DataUtil.player.map[DataUtil.player.layer].npc[i],this.flushPlayerPanel.bind(this),this._view.m_mapList,this.initOperation.bind(this));
+                this._moveStop();
                 return true;
             }
         }
@@ -488,10 +486,10 @@ export default class GameScreen extends ui.game.gameUI {
         for (let i = 0; i < DataUtil.player.map[DataUtil.player.layer].doorIndex.length; i++) {
             if (index == DataUtil.player.map[DataUtil.player.layer].doorIndex[i]) {
                 if (DoorUtil.judgeOpenDoorOrNot(DataUtil.player.map[DataUtil.player.layer].door[i])) {
-                    this.flushPlayerPanel();
                     this._walking = true;
                     DataUtil.player.map[DataUtil.player.layer].doorIndex.splice(i, 1);
                     DataUtil.player.map[DataUtil.player.layer].door.splice(i, 1);
+                    this.flushPlayerPanel();
                     this._view.m_mapList._children[index].asCom.getChildAt(1).asCom.getTransition("common").play(Laya.Handler.create(this, () => {
                         this._walking = false;
                         this._view.m_mapList._children[index].asCom.getChildAt(1).asCom.removeFromParent();
@@ -509,29 +507,24 @@ export default class GameScreen extends ui.game.gameUI {
         for (let i = 0; i < DataUtil.player.map[DataUtil.player.layer].monsterIndex.length; i++) {
             if (index == DataUtil.player.map[DataUtil.player.layer].monsterIndex[i]) {
                 FightWnd.startFight(DataUtil.player.map[DataUtil.player.layer].monster[i], ()=>{
-                    //战斗后
+                    //战斗胜利后的回调
                     this._view.m_mapList._children[index].asCom.getChildAt(1).asCom.removeFromParent();
                     DataUtil.player.map[DataUtil.player.layer].monsterIndex.splice(i, 1);
                     DataUtil.player.map[DataUtil.player.layer].monster.splice(i, 1);
                     this.flushPlayerPanel();
-                });
-                this._moveReturn();
+                    this.initOperation();
+                    this._isFighting = false;
+                },this._view.m_panel);
+                this._isFighting = true;
+                this._moveStop();
                 return true;
             }
         }
         return false;
     }
 
-    saveNow() {
-        if (IsWxUtil.isWxEnvironment()) {
-            WxUtil.saveNow(DataUtil.player);
-        }
-        else {
-            Laya.LocalStorage.setJSON("data", DataUtil.player);
-        }
-    }
-
     protected _useBloodBlue() {
+        if (this._isFighting) return;
         if (this._view.m_blood_blue.value > 0) return;
         if (DataUtil.player.blood_blue <= 0) return;
         DataUtil.player.blood_blue--;
@@ -549,6 +542,7 @@ export default class GameScreen extends ui.game.gameUI {
     }
 
     protected _useBloodRed() {
+        if (this._isFighting) return;
         if (this._view.m_blood_red.value > 0) return;
         if (DataUtil.player.blood_red <= 0) return;
         DataUtil.player.blood_red--;

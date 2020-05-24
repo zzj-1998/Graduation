@@ -312,6 +312,50 @@
     <image id="z6mthq" name="2.png" path="/screen/game/images/"/>
     <image id="z6mthr" name="vs.png" path="/screen/game/images/"/>
     <image id="z6mths" name="3.png" path="/screen/game/images/"/>
+    <component id="oyj7ht" name="LifeComp.xml" path="/screen/game/" exported="true"/>
+    <image id="oyj7hu" name="shop_01.png" path="/ani/npc/images/"/>
+    <image id="oyj7hv" name="shop_02.png" path="/ani/npc/images/"/>
+    <image id="oyj7hw" name="shop_03.png" path="/ani/npc/images/"/>
+    <component id="oyj7hx" name="shop1.xml" path="/ani/npc/" exported="true"/>
+    <component id="oyj7hy" name="shop2.xml" path="/ani/npc/" exported="true"/>
+    <component id="oyj7hz" name="shop3.xml" path="/ani/npc/" exported="true"/>
+    <component id="qkssi1" name="ShopWnd.xml" path="/screen/game/" exported="true"/>
+    <component id="qkssi2" name="ChooseBtn.xml" path="/common/button/"/>
+    <component id="ou2zi3" name="ShopWnd2.xml" path="/screen/game/" exported="true"/>
+    <image id="ou2zi4" name="shop_04.png" path="/ani/npc/images/"/>
+    <component id="ou2zi5" name="ExperienceWnd.xml" path="/screen/game/" exported="true"/>
+    <component id="9xpgi6" name="ExperienceWnd2.xml" path="/screen/game/" exported="true"/>
+    <component id="9xpgi7" name="Sword_01.xml" path="/ani/prop/" exported="true"/>
+    <component id="9xpgi8" name="Sword_02.xml" path="/ani/prop/" exported="true"/>
+    <component id="9xpgi9" name="Sword_03.xml" path="/ani/prop/" exported="true"/>
+    <component id="9xpgia" name="Shield_01.xml" path="/ani/prop/" exported="true"/>
+    <component id="9xpgib" name="Shield_02.xml" path="/ani/prop/" exported="true"/>
+    <component id="9xpgic" name="Shield_03.xml" path="/ani/prop/" exported="true"/>
+    <component id="9xpgid" name="Nugget.xml" path="/ani/prop/" exported="true"/>
+    <component id="9xpgie" name="KeyBox.xml" path="/ani/prop/" exported="true"/>
+    <component id="9xpgif" name="Feather_01.xml" path="/ani/prop/" exported="true"/>
+    <component id="9xpgig" name="Feather_02.xml" path="/ani/prop/" exported="true"/>
+    <component id="9xpgih" name="Badge.xml" path="/ani/prop/" exported="true"/>
+    <component id="9xpgii" name="Wheel.xml" path="/ani/prop/" exported="true"/>
+    <component id="9xpgij" name="Cross.xml" path="/ani/prop/" exported="true"/>
+    <component id="9xpgik" name="LifeBottle.xml" path="/ani/prop/" exported="true"/>
+    <image id="9xpgil" name="Item01-03_3_4.png" path="/ani/prop/images/"/>
+    <image id="9xpgim" name="Item01-05_04.png" path="/ani/prop/images/"/>
+    <image id="9xpgin" name="Item01-05_10.png" path="/ani/prop/images/"/>
+    <image id="9xpgio" name="Item01-06_1_2.png" path="/ani/prop/images/"/>
+    <image id="9xpgip" name="Item01-06_2_2.png" path="/ani/prop/images/"/>
+    <image id="9xpgiq" name="Item01-06_2_3.png" path="/ani/prop/images/"/>
+    <image id="9xpgir" name="Item01-06_03.png" path="/ani/prop/images/"/>
+    <image id="9xpgis" name="Item01-06_05.png" path="/ani/prop/images/"/>
+    <image id="9xpgit" name="Item01-06_11.png" path="/ani/prop/images/"/>
+    <image id="9xpgiu" name="Item01-08_01.png" path="/ani/prop/images/"/>
+    <image id="9xpgiv" name="Item01-08_2_1.png" path="/ani/prop/images/"/>
+    <image id="9xpgiw" name="Item01-08_03.png" path="/ani/prop/images/"/>
+    <image id="9xpgix" name="Item01-08_4_1.png" path="/ani/prop/images/"/>
+    <image id="9xpgiy" name="Item01-08_09.png" path="/ani/prop/images/"/>
+    <image id="9xpgiz" name="Item01-08_11.png" path="/ani/prop/images/"/>
+    <image id="9xpgj0" name="Item01-01_05.png" path="/ani/prop/images/"/>
+    <component id="9xpgj1" name="Hammer.xml" path="/ani/prop/" exported="true"/>
   </resources>
   <publish name="Main" genCode="true"/>
 </packageDescription>

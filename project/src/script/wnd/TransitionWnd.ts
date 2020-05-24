@@ -24,7 +24,7 @@ export default class TransitionWnd extends ui.game.gameUI {
         Laya.timer.once(1500, this, this.changeLayer);
         Laya.timer.once(2500, this, this.hide);
     }
-    
+
     onOpened(data) {
         this._type = data;
     }

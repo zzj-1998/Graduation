@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="704,704">
+  <displayList>
+    <graph id="n1_qkss" name="n1" xy="102,102" size="500,500" group="n13_qkss" type="rect" fillColor="#ff010101"/>
+    <loader id="n3_qkss" name="n3" xy="102,102" size="500,500" group="n13_qkss" url="ui://n1eyqnayjt4oge" fill="scale">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <loader id="n14_ou2z" name="n14" xy="140,140" size="32,32" group="n13_qkss" scale="2,2" url="ui://n1eyqnaybhkz3r"/>
+    <text id="n4_qkss" name="n4" xy="221,130" size="303,95" group="n13_qkss" fontSize="23" color="#ffffff" text="你好，英雄的人类，只要你有&#xA;足够的经验，我就可以让你变&#xA;得更强大："/>
+    <component id="n5_qkss" name="btnGrade" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="112,230" size="480,50" group="n13_qkss">
+      <Button title="提升三级（需要 270 点）"/>
+    </component>
+    <component id="n6_qkss" name="btnAttack" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="112,290" size="480,50" group="n13_qkss">
+      <Button title="增加攻击17（需要 95 点）"/>
+    </component>
+    <component id="n7_qkss" name="btnDefense" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="112,350" size="480,50" group="n13_qkss">
+      <Button title="增加防御17（需要 95 点）"/>
+    </component>
+    <component id="n8_qkss" name="btnHit" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="112,410" size="480,50" group="n13_qkss">
+      <Button title="增加命中率0.85（需要 95 点）"/>
+    </component>
+    <component id="n9_qkss" name="btnCrit" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="112,470" size="480,50" group="n13_qkss">
+      <Button title="增加暴击率0.85（需要 95 点）"/>
+    </component>
+    <component id="n10_qkss" name="btnDodge" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="112,530" size="480,50" group="n13_qkss">
+      <Button title="增加闪避率0.85（需要 95 点）"/>
+    </component>
+    <component id="n12_qkss" name="btnClose" src="prsq2" fileName="common/button/CommonIconBtn.xml" xy="549,111" size="43,46" group="n13_qkss" scale="0.6,0.6">
+      <Button icon="ui://n1eyqnayaie1fp"/>
+    </component>
+    <group id="n13_qkss" name="n13" xy="102,102" size="500,500" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="135,50">
+  <controller name="type" exported="true" pages="0,,1,,2," selected="0"/>
+  <displayList>
+    <text id="n35_oyj7" name="life" xy="0,0" size="135,50" fontSize="30" align="right" vAlign="middle" autoSize="none" bold="true" italic="true" singleLine="true" text="-1000">
+      <gearColor controller="type" pages="0,1,2" values="#000000,#000000|#ffffff,#000000|#ff0000,#000000"/>
+    </text>
+  </displayList>
+  <transition name="t0">
+    <item time="0" type="Alpha" target="n35_oyj7" tween="true" startValue="1" endValue="0" duration="24"/>
+    <item time="0" type="XY" target="n35_oyj7" tween="true" startValue="0,0" endValue="0,-50" duration="24"/>
+  </transition>
+</component>

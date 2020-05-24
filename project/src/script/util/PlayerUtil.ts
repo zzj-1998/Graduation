@@ -30,21 +30,39 @@ export default class Player {
 
     init() {
         this.grade = 1;
-        this.life = 1000;
-        this.attack = 10;
-        this.defense = 10;
+        this.life = 10000;
+        this.attack = 1000;
+        this.defense = 1000;
         this.hit = 1;
         this.crit = 1;
         this.dodge = 1;
-        this.gold = 0;
-        this.experience = 0;
-        this.layer = 0;
-        this.key = [41, 41, 41];
+        this.gold = 1000;
+        this.experience = 1000;
+        this.layer = 19;
+        this.key = [10, 10, 10];
         this.blood_red = 0;
         this.blood_blue = 0;
         this.characterIndex = 0;
         this.map = [];
         this.initMap();
+    }
+
+    initByData(data) {
+        this.grade = data.grade;
+        this.life = data.life;
+        this.attack = data.attack;
+        this.defense = data.defense;
+        this.hit = data.hit;
+        this.crit = data.crit;
+        this.dodge = data.dodge;
+        this.gold = data.gold;
+        this.experience = data.experience;
+        this.layer = data.layer;
+        this.key = data.key;
+        this.blood_red = data.blood_red;
+        this.blood_blue = data.blood_blue;
+        this.characterIndex = data,this.characterIndex;
+        this.map = data.map;
     }
 
     initMap() {
@@ -72,7 +90,7 @@ export default class Player {
         }
     }
 
-    useGold(gold: number) {
+    public useGold(gold: number) {
         if (this.gold >= gold) {
             this.gold -= gold;
             return true;
@@ -80,8 +98,12 @@ export default class Player {
         return false;
     }
 
-    addGold(gold: number) {
-        this.gold += gold;
+    public useExperience(experience: number) {
+        if (this.experience >= experience) {
+            this.experience -= experience;
+            return true;
+        }
+        return false;
     }
 
 }

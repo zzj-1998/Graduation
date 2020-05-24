@@ -25,4 +25,17 @@ export class WxUtil {
             }
         });
     }
+
+    public static removeNow(key: string) {
+        try {
+            wx.removeStorageSync(key);
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    public static getData() {
+        let value = JSON.parse(JSON.stringify(wx.getStorageSync("data")));
+        return value;
+    }
 }

@@ -1,5 +1,21 @@
 /** This is an automatically generated class by FairyGUI. Please do not modify it. **/
 
+import UI_ExperienceWnd2 from "./UI_ExperienceWnd2";
+import UI_Sword_01 from "./UI_Sword_01";
+import UI_Sword_02 from "./UI_Sword_02";
+import UI_Sword_03 from "./UI_Sword_03";
+import UI_Shield_01 from "./UI_Shield_01";
+import UI_Shield_02 from "./UI_Shield_02";
+import UI_Shield_03 from "./UI_Shield_03";
+import UI_Nugget from "./UI_Nugget";
+import UI_KeyBox from "./UI_KeyBox";
+import UI_Feather_01 from "./UI_Feather_01";
+import UI_Feather_02 from "./UI_Feather_02";
+import UI_Badge from "./UI_Badge";
+import UI_Wheel from "./UI_Wheel";
+import UI_Cross from "./UI_Cross";
+import UI_LifeBottle from "./UI_LifeBottle";
+import UI_Hammer from "./UI_Hammer";
 import UI_MapItem from "./UI_MapItem";
 import UI_ExplainScreen from "./UI_ExplainScreen";
 import UI_door_yellow from "./UI_door_yellow";
@@ -59,7 +75,14 @@ import UI_GameScreen from "./UI_GameScreen";
 import UI_fairy from "./UI_fairy";
 import UI_MsgBox from "./UI_MsgBox";
 import UI_TransitionWnd from "./UI_TransitionWnd";
+import UI_ShopWnd2 from "./UI_ShopWnd2";
+import UI_ExperienceWnd from "./UI_ExperienceWnd";
+import UI_LifeComp from "./UI_LifeComp";
+import UI_shop1 from "./UI_shop1";
+import UI_shop2 from "./UI_shop2";
+import UI_shop3 from "./UI_shop3";
 import UI_HomeScreen from "./UI_HomeScreen";
+import UI_ShopWnd from "./UI_ShopWnd";
 import UI_Key_yellow from "./UI_Key_yellow";
 import UI_Key_blue from "./UI_Key_blue";
 import UI_Key_red from "./UI_Key_red";
@@ -71,6 +94,22 @@ import UI_FightWnd from "./UI_FightWnd";
 
 export default class MainBinder {
 	public static bindAll():void {
+		fgui.UIObjectFactory.setExtension(UI_ExperienceWnd2.URL, UI_ExperienceWnd2);
+		fgui.UIObjectFactory.setExtension(UI_Sword_01.URL, UI_Sword_01);
+		fgui.UIObjectFactory.setExtension(UI_Sword_02.URL, UI_Sword_02);
+		fgui.UIObjectFactory.setExtension(UI_Sword_03.URL, UI_Sword_03);
+		fgui.UIObjectFactory.setExtension(UI_Shield_01.URL, UI_Shield_01);
+		fgui.UIObjectFactory.setExtension(UI_Shield_02.URL, UI_Shield_02);
+		fgui.UIObjectFactory.setExtension(UI_Shield_03.URL, UI_Shield_03);
+		fgui.UIObjectFactory.setExtension(UI_Nugget.URL, UI_Nugget);
+		fgui.UIObjectFactory.setExtension(UI_KeyBox.URL, UI_KeyBox);
+		fgui.UIObjectFactory.setExtension(UI_Feather_01.URL, UI_Feather_01);
+		fgui.UIObjectFactory.setExtension(UI_Feather_02.URL, UI_Feather_02);
+		fgui.UIObjectFactory.setExtension(UI_Badge.URL, UI_Badge);
+		fgui.UIObjectFactory.setExtension(UI_Wheel.URL, UI_Wheel);
+		fgui.UIObjectFactory.setExtension(UI_Cross.URL, UI_Cross);
+		fgui.UIObjectFactory.setExtension(UI_LifeBottle.URL, UI_LifeBottle);
+		fgui.UIObjectFactory.setExtension(UI_Hammer.URL, UI_Hammer);
 		fgui.UIObjectFactory.setExtension(UI_MapItem.URL, UI_MapItem);
 		fgui.UIObjectFactory.setExtension(UI_ExplainScreen.URL, UI_ExplainScreen);
 		fgui.UIObjectFactory.setExtension(UI_door_yellow.URL, UI_door_yellow);
@@ -130,7 +169,14 @@ export default class MainBinder {
 		fgui.UIObjectFactory.setExtension(UI_fairy.URL, UI_fairy);
 		fgui.UIObjectFactory.setExtension(UI_MsgBox.URL, UI_MsgBox);
 		fgui.UIObjectFactory.setExtension(UI_TransitionWnd.URL, UI_TransitionWnd);
+		fgui.UIObjectFactory.setExtension(UI_ShopWnd2.URL, UI_ShopWnd2);
+		fgui.UIObjectFactory.setExtension(UI_ExperienceWnd.URL, UI_ExperienceWnd);
+		fgui.UIObjectFactory.setExtension(UI_LifeComp.URL, UI_LifeComp);
+		fgui.UIObjectFactory.setExtension(UI_shop1.URL, UI_shop1);
+		fgui.UIObjectFactory.setExtension(UI_shop2.URL, UI_shop2);
+		fgui.UIObjectFactory.setExtension(UI_shop3.URL, UI_shop3);
 		fgui.UIObjectFactory.setExtension(UI_HomeScreen.URL, UI_HomeScreen);
+		fgui.UIObjectFactory.setExtension(UI_ShopWnd.URL, UI_ShopWnd);
 		fgui.UIObjectFactory.setExtension(UI_Key_yellow.URL, UI_Key_yellow);
 		fgui.UIObjectFactory.setExtension(UI_Key_blue.URL, UI_Key_blue);
 		fgui.UIObjectFactory.setExtension(UI_Key_red.URL, UI_Key_red);

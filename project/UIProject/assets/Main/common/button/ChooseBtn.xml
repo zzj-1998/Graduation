@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="120,50" pivot="0.5,0.5" extention="Button">
+  <controller name="button" exported="true" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <text id="n44_qkss" name="title" xy="10,8" size="100,34" fontSize="24" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="">
+      <relation target="" sidePair="width-width"/>
+    </text>
+    <graph id="n46_qkss" name="n46" xy="0,0" size="120,50" type="rect" lineSize="4" lineColor="#ffffffff" fillColor="#00ffffff" corner="5">
+      <gearDisplay controller="button" pages="1,2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+  </displayList>
+  <Button downEffect="scale" downEffectValue=".9"/>
+</component>

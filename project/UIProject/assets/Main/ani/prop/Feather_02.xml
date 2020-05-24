@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64">
+  <displayList>
+    <loader id="n0_aie1" name="icon" xy="0,0" size="64,64" url="ui://n1eyqnay9xpgip" fill="scale"/>
+  </displayList>
+  <transition name="common" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Icon" target="n0_aie1" value="ui://n1eyqnay9xpgip"/>
+    <item time="6" type="Icon" target="n0_aie1" value="ui://n1eyqnay9xpgiq"/>
+    <item time="12" type="Icon" target="n0_aie1" value="ui://n1eyqnay9xpgip"/>
+    <item time="18" type="Icon" target="n0_aie1" value="ui://n1eyqnay9xpgiq"/>
+    <item time="24" type="Icon" target="n0_aie1" value="ui://n1eyqnay9xpgip"/>
+  </transition>
+</component>

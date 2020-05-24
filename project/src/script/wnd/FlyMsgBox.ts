@@ -13,7 +13,7 @@ export class FlyMsgBox extends UI_MsgBox {
 
 	show(msg: string) {
 		this.x = Laya.stage.width / 2;
-		this.y = Laya.stage.height / 2;//这里可以控制飞起的高度位置
+		this.y = Laya.stage.height / 2;
 		this.alpha = 1;
 		this.m_txt.text = msg;
 		Laya.Tween.to(this, { y: this.y - 200, alpha: 0 }, 1600, Laya.Ease.linearIn, Laya.Handler.create(this, () => {
