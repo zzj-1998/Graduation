@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="704,704">
+  <displayList>
+    <graph id="n1_qkss" name="n1" xy="0,0" size="704,704" group="n13_qkss" type="rect" fillColor="#ff010101"/>
+    <list id="n17_e5g7" name="AttributeList" xy="0,25" size="704,679" group="n13_qkss" overflow="hidden" lineGap="5" colGap="15" defaultItem="ui://n1eyqnaye5g7j9" align="center" autoClearItems="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n12_qkss" name="btnClose" src="prsq2" fileName="common/button/CommonIconBtn.xml" xy="660,0" size="43,46" group="n13_qkss" scale="0.6,0.6">
+      <Button icon="ui://n1eyqnayaie1fp"/>
+    </component>
+    <group id="n13_qkss" name="n13" xy="0,0" size="704,704" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

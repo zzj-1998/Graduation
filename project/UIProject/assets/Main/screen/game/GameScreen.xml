@@ -155,5 +155,7 @@
       <relation target="" sidePair="center-center,middle-middle"/>
       <ProgressBar max="100"/>
     </component>
+    <component id="n29_e5g7" name="badgeBtn" src="e5g7ja" fileName="comp/prop/BadgeBar.xml" xy="1062,315"/>
+    <component id="n30_e5g7" name="WheelBtn" src="e5g7jb" fileName="comp/prop/WheelBar.xml" xy="1254,315"/>
   </displayList>
 </component>

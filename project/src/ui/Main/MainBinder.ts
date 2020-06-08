@@ -1,5 +1,6 @@
 /** This is an automatically generated class by FairyGUI. Please do not modify it. **/
 
+import UI_SellKeyWnd from "./UI_SellKeyWnd";
 import UI_ExperienceWnd2 from "./UI_ExperienceWnd2";
 import UI_Sword_01 from "./UI_Sword_01";
 import UI_Sword_02 from "./UI_Sword_02";
@@ -60,6 +61,12 @@ import UI_Monster32 from "./UI_Monster32";
 import UI_Monster33 from "./UI_Monster33";
 import UI_Monster34 from "./UI_Monster34";
 import UI_Monster35 from "./UI_Monster35";
+import UI_ChangeLayerWnd from "./UI_ChangeLayerWnd";
+import UI_LayerBtn from "./UI_LayerBtn";
+import UI_AttributeWnd from "./UI_AttributeWnd";
+import UI_AttributeBar from "./UI_AttributeBar";
+import UI_BadgeBar from "./UI_BadgeBar";
+import UI_WheelBar from "./UI_WheelBar";
 import UI_Blood_red from "./UI_Blood_red";
 import UI_Blood_blue from "./UI_Blood_blue";
 import UI_Stone_Attack from "./UI_Stone_Attack";
@@ -73,6 +80,7 @@ import UI_KnapsackComp from "./UI_KnapsackComp";
 import UI_character from "./UI_character";
 import UI_GameScreen from "./UI_GameScreen";
 import UI_fairy from "./UI_fairy";
+import UI_BuyKeyWnd from "./UI_BuyKeyWnd";
 import UI_MsgBox from "./UI_MsgBox";
 import UI_TransitionWnd from "./UI_TransitionWnd";
 import UI_ShopWnd2 from "./UI_ShopWnd2";
@@ -94,6 +102,7 @@ import UI_FightWnd from "./UI_FightWnd";
 
 export default class MainBinder {
 	public static bindAll():void {
+		fgui.UIObjectFactory.setExtension(UI_SellKeyWnd.URL, UI_SellKeyWnd);
 		fgui.UIObjectFactory.setExtension(UI_ExperienceWnd2.URL, UI_ExperienceWnd2);
 		fgui.UIObjectFactory.setExtension(UI_Sword_01.URL, UI_Sword_01);
 		fgui.UIObjectFactory.setExtension(UI_Sword_02.URL, UI_Sword_02);
@@ -154,6 +163,12 @@ export default class MainBinder {
 		fgui.UIObjectFactory.setExtension(UI_Monster33.URL, UI_Monster33);
 		fgui.UIObjectFactory.setExtension(UI_Monster34.URL, UI_Monster34);
 		fgui.UIObjectFactory.setExtension(UI_Monster35.URL, UI_Monster35);
+		fgui.UIObjectFactory.setExtension(UI_ChangeLayerWnd.URL, UI_ChangeLayerWnd);
+		fgui.UIObjectFactory.setExtension(UI_LayerBtn.URL, UI_LayerBtn);
+		fgui.UIObjectFactory.setExtension(UI_AttributeWnd.URL, UI_AttributeWnd);
+		fgui.UIObjectFactory.setExtension(UI_AttributeBar.URL, UI_AttributeBar);
+		fgui.UIObjectFactory.setExtension(UI_BadgeBar.URL, UI_BadgeBar);
+		fgui.UIObjectFactory.setExtension(UI_WheelBar.URL, UI_WheelBar);
 		fgui.UIObjectFactory.setExtension(UI_Blood_red.URL, UI_Blood_red);
 		fgui.UIObjectFactory.setExtension(UI_Blood_blue.URL, UI_Blood_blue);
 		fgui.UIObjectFactory.setExtension(UI_Stone_Attack.URL, UI_Stone_Attack);
@@ -167,6 +182,7 @@ export default class MainBinder {
 		fgui.UIObjectFactory.setExtension(UI_character.URL, UI_character);
 		fgui.UIObjectFactory.setExtension(UI_GameScreen.URL, UI_GameScreen);
 		fgui.UIObjectFactory.setExtension(UI_fairy.URL, UI_fairy);
+		fgui.UIObjectFactory.setExtension(UI_BuyKeyWnd.URL, UI_BuyKeyWnd);
 		fgui.UIObjectFactory.setExtension(UI_MsgBox.URL, UI_MsgBox);
 		fgui.UIObjectFactory.setExtension(UI_TransitionWnd.URL, UI_TransitionWnd);
 		fgui.UIObjectFactory.setExtension(UI_ShopWnd2.URL, UI_ShopWnd2);

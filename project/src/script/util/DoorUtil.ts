@@ -4,6 +4,7 @@ import UI_door_red from "../../ui/Main/UI_door_red";
 import { DataUtil } from "./DataUtil";
 import UI_door_steel_green from "../../ui/Main/UI_door_steel_green";
 import UI_wall_steel from "../../ui/Main/UI_wall_steel";
+import { SoundUtil } from "./SoundUtil";
 
 export class DoorUtil {
     static getDoorById(id: number) {
@@ -36,6 +37,7 @@ export class DoorUtil {
         }
         if (DataUtil.player.key[id - 1]) {
             DataUtil.player.key[id - 1]--;
+            SoundUtil.playSound(SoundUtil.sound6);
             return true;
         }
         return false;

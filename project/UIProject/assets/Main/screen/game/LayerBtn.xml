@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="164,58">
+  <displayList>
+    <component id="n8_qkss" name="btnLayer" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="0,0" size="164,58">
+      <Button title="第 1 层" titleFontSize="30"/>
+    </component>
+  </displayList>
+</component>

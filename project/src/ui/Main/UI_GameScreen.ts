@@ -5,6 +5,8 @@ import UI_PanelComp from "./UI_PanelComp";
 import UI_KeyPanelComp from "./UI_KeyPanelComp";
 import UI_LayerComp from "./UI_LayerComp";
 import UI_KnapsackComp from "./UI_KnapsackComp";
+import UI_BadgeBar from "./UI_BadgeBar";
+import UI_WheelBar from "./UI_WheelBar";
 
 export default class UI_GameScreen extends fgui.GComponent {
 
@@ -16,6 +18,8 @@ export default class UI_GameScreen extends fgui.GComponent {
 	public m_btnSave:fgui.GButton;
 	public m_blood_red:UI_KnapsackComp;
 	public m_blood_blue:UI_KnapsackComp;
+	public m_badgeBtn:UI_BadgeBar;
+	public m_WheelBtn:UI_WheelBar;
 	public static URL:string = "ui://n1eyqnayh7ng1x";
 
 	public static createInstance():UI_GameScreen {
@@ -31,5 +35,7 @@ export default class UI_GameScreen extends fgui.GComponent {
 		this.m_btnSave = <fgui.GButton>(this.getChildAt(7));
 		this.m_blood_red = <UI_KnapsackComp>(this.getChildAt(8));
 		this.m_blood_blue = <UI_KnapsackComp>(this.getChildAt(9));
+		this.m_badgeBtn = <UI_BadgeBar>(this.getChildAt(10));
+		this.m_WheelBtn = <UI_WheelBar>(this.getChildAt(11));
 	}
 }

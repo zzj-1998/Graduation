@@ -1,4 +1,5 @@
 import { DataUtil } from "./DataUtil";
+import { SoundUtil } from "./SoundUtil";
 
 export interface mapItem {
     npc: number[];
@@ -27,6 +28,9 @@ export default class Player {
     public blood_blue: number;//蓝血瓶数量
     public characterIndex: number;//角色位置
     public map: Array<mapItem>;//地图信息
+    public isHaveBadge: boolean;//是否拥有圣光徽
+    public isHaveWheel: boolean;//是否拥有风之轮盘
+    public maxLayer: number;//最高达到的楼层
 
     init() {
         this.grade = 1;
@@ -38,12 +42,15 @@ export default class Player {
         this.dodge = 1;
         this.gold = 1000;
         this.experience = 1000;
-        this.layer = 19;
+        this.layer = 5;
         this.key = [10, 10, 10];
-        this.blood_red = 0;
+        this.blood_red = 1;
         this.blood_blue = 0;
         this.characterIndex = 0;
         this.map = [];
+        this.isHaveBadge = false;
+        this.isHaveWheel = false;
+        this.maxLayer = 0;
         this.initMap();
     }
 
@@ -61,7 +68,10 @@ export default class Player {
         this.key = data.key;
         this.blood_red = data.blood_red;
         this.blood_blue = data.blood_blue;
-        this.characterIndex = data,this.characterIndex;
+        this.characterIndex = data.characterIndex;
+        this.isHaveBadge = data.isHaveBadge;
+        this.isHaveWheel = data.isHaveWheel;
+        this.maxLayer = data.maxLayer;
         this.map = data.map;
     }
 
@@ -93,6 +103,7 @@ export default class Player {
     public useGold(gold: number) {
         if (this.gold >= gold) {
             this.gold -= gold;
+            SoundUtil.playSound(SoundUtil.sound8);
             return true;
         }
         return false;

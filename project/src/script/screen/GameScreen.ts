@@ -15,6 +15,9 @@ import { IsWxUtil, WxUtil } from "../util/IsWxUtil";
 import { FlyUtil } from "../util/FlyUtil";
 import { FlyMsgBox } from "../wnd/FlyMsgBox";
 import { FightWnd } from "../wnd/FightWnd";
+import { ChangeLayerWnd } from "../wnd/ChangeLayerWnd";
+import { AttributeWnd } from "../wnd/AttributeWnd";
+import { SoundUtil } from "../util/SoundUtil";
 
 export default class GameScreen extends ui.game.gameUI {
     private _view: UI_GameScreen;
@@ -43,10 +46,13 @@ export default class GameScreen extends ui.game.gameUI {
         this._isFighting = false;
         this._view.m_btnSave.onClick(this, ()=>{
             DataUtil.saveNow();
-            FlyMsgBox.showTip("保存成功")
+            FlyMsgBox.showTip("保存成功");
         });
         this._view.m_blood_red.onClick(this, this._useBloodRed);
         this._view.m_blood_blue.onClick(this, this._useBloodBlue);
+        this._view.m_badgeBtn.onClick(this, this._showBadgeWnd);
+        this._view.m_WheelBtn.onClick(this, this._showWheelWnd);
+        SoundUtil.playBgm();
     }
 
     /** 初始化面板 */
@@ -114,6 +120,18 @@ export default class GameScreen extends ui.game.gameUI {
                 this._view.m_blood_blue.getController('nums').selectedIndex = 1;
                 this._view.m_blood_blue.getChild('num').asTextField.text = "" + DataUtil.player.blood_blue;
             }
+        }
+        if (DataUtil.player.isHaveBadge) {
+            this._view.m_badgeBtn.getController('type').selectedIndex = 1;
+        }
+        else {
+            this._view.m_badgeBtn.getController('type').selectedIndex = 0;
+        }
+        if (DataUtil.player.isHaveWheel) {
+            this._view.m_WheelBtn.getController('type').selectedIndex = 1;
+        }
+        else {
+            this._view.m_WheelBtn.getController('type').selectedIndex = 0;
         }
     }
 
@@ -247,6 +265,7 @@ export default class GameScreen extends ui.game.gameUI {
         if (this._judgeCharacterUp(DataUtil.player.characterIndex, DataUtil.player.characterIndex - 11)) {
             if (this._judgeCollision(DataUtil.player.characterIndex - 11)) return;
             this._walking = true;
+            SoundUtil.playSound(SoundUtil.sound1);
             this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom.getTransition('back').play();
             Laya.Tween.to(this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom, { y: -64 }, 330, Laya.Ease.linearIn, Laya.Handler.create(this, () => {
                 this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom.removeFromParent();
@@ -267,6 +286,7 @@ export default class GameScreen extends ui.game.gameUI {
         if (this._judgeCharacterDown(DataUtil.player.characterIndex, DataUtil.player.characterIndex + 11)) {
             if (this._judgeCollision(DataUtil.player.characterIndex + 11)) return;
             this._walking = true;
+            SoundUtil.playSound(SoundUtil.sound1);
             this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom.removeFromParent();
             let character = <UI_character>fairygui.UIPackage.createObjectFromURL(UI_character.URL, UI_character);
             character.setScale(2, 2);
@@ -287,6 +307,7 @@ export default class GameScreen extends ui.game.gameUI {
         if (this._judgeCharacterRight(DataUtil.player.characterIndex, DataUtil.player.characterIndex + 1)) {
             if (this._judgeCollision(DataUtil.player.characterIndex + 1)) return;
             this._walking = true;
+            SoundUtil.playSound(SoundUtil.sound1);
             this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom.removeFromParent();
             let character = <UI_character>fairygui.UIPackage.createObjectFromURL(UI_character.URL, UI_character);
             character.setScale(2, 2);
@@ -307,6 +328,7 @@ export default class GameScreen extends ui.game.gameUI {
         if (this._judgeCharacterLeft(DataUtil.player.characterIndex, DataUtil.player.characterIndex - 1)) {
             if (this._judgeCollision(DataUtil.player.characterIndex - 1)) return;
             this._walking = true;
+            SoundUtil.playSound(SoundUtil.sound1);
             this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom.getTransition('left').play();
             Laya.Tween.to(this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom, { x: -64 }, 330, Laya.Ease.linearIn, Laya.Handler.create(this, () => {
                 this._view.m_mapList._children[DataUtil.player.characterIndex].asCom.getChildAt(1).asCom.removeFromParent();
@@ -412,7 +434,10 @@ export default class GameScreen extends ui.game.gameUI {
     protected _judgeStairs(index: number) {
         if (index == DataUtil.getMap(DataUtil.player.layer).floor[0]) {
             DataUtil.player.layer++;
-            Laya.Scene.open("game/transition.scene", false, true);
+            if (DataUtil.player.layer > DataUtil.player.maxLayer) {
+                DataUtil.player.maxLayer = DataUtil.player.layer;
+            }
+            Laya.Scene.open("game/transition.scene", false, DataUtil.player.layer - 1);
             Laya.timer.once(1000, this, this.initMapList);
             Laya.timer.once(2000, this, this.flushPlayerPanel);
             this._moveReturn();
@@ -420,7 +445,7 @@ export default class GameScreen extends ui.game.gameUI {
         }
         else if (index == DataUtil.getMap(DataUtil.player.layer).floor[1]) {
             DataUtil.player.layer--;
-            Laya.Scene.open("game/transition.scene", false, false);
+            Laya.Scene.open("game/transition.scene", false, DataUtil.player.layer + 1);
             Laya.timer.once(1000, this, this.initMapList, [1]);
             Laya.timer.once(2000, this, this.flushPlayerPanel);
             this._moveReturn();
@@ -514,6 +539,10 @@ export default class GameScreen extends ui.game.gameUI {
                     this.flushPlayerPanel();
                     this.initOperation();
                     this._isFighting = false;
+                },()=>{
+                    this.flushPlayerPanel();
+                    this.initOperation();
+                    this._isFighting = false;
                 },this._view.m_panel);
                 this._isFighting = true;
                 this._moveStop();
@@ -529,6 +558,7 @@ export default class GameScreen extends ui.game.gameUI {
         if (DataUtil.player.blood_blue <= 0) return;
         DataUtil.player.blood_blue--;
         DataUtil.player.life += 500;
+        SoundUtil.playSound(SoundUtil.sound2);
         this._view.m_blood_blue.value = 100;
         this.flushPlayerPanel();
         Laya.timer.loop(20, this, this.cdBloodBlue);
@@ -547,6 +577,7 @@ export default class GameScreen extends ui.game.gameUI {
         if (DataUtil.player.blood_red <= 0) return;
         DataUtil.player.blood_red--;
         DataUtil.player.life += 200;
+        SoundUtil.playSound(SoundUtil.sound2);
         this._view.m_blood_red.value = 100;
         this.flushPlayerPanel();
         Laya.timer.loop(20, this, this.cdBloodRed);
@@ -557,5 +588,34 @@ export default class GameScreen extends ui.game.gameUI {
         if (this._view.m_blood_red.value <= 0) {
             Laya.timer.clear(this, this.cdBloodRed);
         }
+    }
+
+    protected _showBadgeWnd() {
+        if (!DataUtil.player.isHaveBadge) {
+            FlyMsgBox.showTip("暂时无法使用")
+            return;
+        }
+        if (DataUtil.isOpenBadge || DataUtil.isOpenWheel) return;
+        DataUtil.isOpenBadge = true;
+        AttributeWnd.showAttributeWnd(this._view.m_mapList,this.initOperation.bind(this));
+        this._moveStop();
+    }
+
+    protected _showWheelWnd() {
+        if (!DataUtil.player.isHaveWheel || DataUtil.player.layer == 21) {
+            FlyMsgBox.showTip("暂时无法使用")
+            return;
+        }
+        if (DataUtil.isOpenWheel || DataUtil.isOpenBadge) return;
+        DataUtil.isOpenWheel = true;
+        ChangeLayerWnd.showChangeLayer(this.jumpLayer.bind(this),this._view.m_mapList,this.initOperation.bind(this));
+        this._moveStop();
+    }
+
+    protected jumpLayer() {
+        Laya.Scene.open("game/transition.scene", false, DataUtil.player.layer);
+        Laya.timer.once(1000, this, this.initMapList);
+        Laya.timer.once(2000, this, this.flushPlayerPanel);
+        this._moveReturn();
     }
 }

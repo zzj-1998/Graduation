@@ -4,7 +4,7 @@ import { DataUtil } from "../util/DataUtil";
 
 export default class TransitionWnd extends ui.game.gameUI {
     private _view: UI_TransitionWnd;
-    protected _type: boolean;
+    protected _layer: number;
     constructor() {
         super();
         var res: Array<any> = [
@@ -20,13 +20,13 @@ export default class TransitionWnd extends ui.game.gameUI {
         this._view = <UI_TransitionWnd>fairygui.UIPackage.createObjectFromURL(UI_TransitionWnd.URL, UI_TransitionWnd);
         this._view.makeFullScreen();
         fairygui.GRoot.inst.addChild(this._view);
-        this.showOriginalLayer(this._type);
+        this.showOriginalLayer(this._layer);
         Laya.timer.once(1500, this, this.changeLayer);
         Laya.timer.once(2500, this, this.hide);
     }
 
     onOpened(data) {
-        this._type = data;
+        this._layer = data;
     }
 
     protected hide() {
@@ -44,20 +44,13 @@ export default class TransitionWnd extends ui.game.gameUI {
         }
     }
 
-    protected showOriginalLayer(type: boolean) {
-        let layer = DataUtil.player.layer;
-        if (type) {
-            layer--;
-        }
-        else {
-            layer++;
-        }
-        if (layer <= 0) {
+    protected showOriginalLayer(Orlayer: number) {
+        if (Orlayer <= 0) {
             this._view.m_type.selectedIndex = 0;
         }
         else {
             this._view.m_type.selectedIndex = 1;
-            this._view.m_layer.text = "" + layer;
+            this._view.m_layer.text = "" + Orlayer;
         }
     }
 }

@@ -10,6 +10,8 @@ import UI_thief from "../../ui/Main/UI_thief";
 import UI_princess from "../../ui/Main/UI_princess";
 import { ExperienceWnd } from "../wnd/ExperienceWnd";
 import { ExperienceWnd2 } from "../wnd/ExperienceWnd2";
+import { BuyKeyWnd } from "../wnd/BuyKeyWnd";
+import { SellKeyWnd } from "../wnd/SellKeyWnd";
 
 export class NPCUtil {
 
@@ -95,10 +97,10 @@ export class NPCUtil {
                 //小偷
                 break;
             case 13:
-                //购买钥匙
+                BuyKeyWnd.showBuyKeyWnd(cb,comp,finish);
                 break;
             case 14:
-                //出售钥匙
+                SellKeyWnd.showSellKeyWnd(cb,comp,finish);
                 break;
             case 15:
                 //15层大师

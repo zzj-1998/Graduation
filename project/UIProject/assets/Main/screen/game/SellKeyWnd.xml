@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="704,704">
+  <displayList>
+    <graph id="n1_qkss" name="n1" xy="152,152" size="400,400" group="n13_qkss" type="rect" fillColor="#ff010101"/>
+    <loader id="n3_qkss" name="n3" xy="152,152" size="400,400" group="n13_qkss" url="ui://n1eyqnayjt4oge" fill="scale">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <loader id="n14_ou2z" name="n14" xy="177,186" size="32,32" group="n13_qkss" scale="2,2" url="ui://n1eyqnaybhkz3n"/>
+    <text id="n4_qkss" name="n4" xy="246,186" size="257,95" group="n13_qkss" fontSize="23" color="#ffffff" text="    哦，欢迎你的到来，如&#xA;果你手里缺少金币，我可&#xA;以帮你："/>
+    <component id="n8_qkss" name="btnYellowKey" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="192,317" size="320,50" group="n13_qkss">
+      <Button title="卖出 1 把黄钥匙（$ 7）"/>
+    </component>
+    <component id="n9_qkss" name="btnBlueKey" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="192,390" size="320,50" group="n13_qkss">
+      <Button title="卖出 1 把蓝钥匙（$ 35）"/>
+    </component>
+    <component id="n10_qkss" name="btnRedKey" src="qkssi2" fileName="common/button/ChooseBtn.xml" xy="192,470" size="320,50" group="n13_qkss">
+      <Button title="卖出 1 把红钥匙（$ 70）"/>
+    </component>
+    <component id="n12_qkss" name="btnClose" src="prsq2" fileName="common/button/CommonIconBtn.xml" xy="505,153" size="43,46" group="n13_qkss" scale="0.6,0.6">
+      <relation target="n3_qkss" sidePair="right-right,top-top"/>
+      <Button icon="ui://n1eyqnayaie1fp"/>
+    </component>
+    <group id="n13_qkss" name="n13" xy="152,152" size="400,400" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

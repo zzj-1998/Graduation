@@ -22,6 +22,7 @@ import UI_Hammer from "../../ui/Main/UI_Hammer";
 import UI_Shield_03 from "../../ui/Main/UI_Shield_03";
 import UI_Sword_03 from "../../ui/Main/UI_Sword_03";
 import UI_LifeBottle from "../../ui/Main/UI_LifeBottle";
+import { SoundUtil } from "./SoundUtil";
 
 export class PropUtil {
 
@@ -90,6 +91,7 @@ export class PropUtil {
     }
 
     public static addProp(id: number) {
+        SoundUtil.playSound(SoundUtil.sound7);
         switch (id) {
             case 1:
                 DataUtil.player.key[0]++;
@@ -150,10 +152,12 @@ export class PropUtil {
                 FlyMsgBox.showTip("得到 金块 金币数加 300 ！");
                 return false;
             case 14:
-                //圣光徽 查看怪物属性
+                DataUtil.player.isHaveBadge = true;
+                FlyMsgBox.showTip("得到 圣光徽 点击右侧图标即可使用 ！");
                 return false;
             case 15:
-                //风之轮盘 飞层数
+                DataUtil.player.isHaveWheel = true;
+                FlyMsgBox.showTip("得到 风之轮盘 点击右侧图标即可使用 ！");
                 return false;
             case 16:
                 //幸运十字架 给仙子增加1.33倍血攻防

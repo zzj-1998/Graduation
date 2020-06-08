@@ -1,6 +1,7 @@
 import { DataUtil } from "../util/DataUtil";
 import { FlyMsgBox } from "./FlyMsgBox";
 import UI_ExperienceWnd2 from "../../ui/Main/UI_ExperienceWnd2";
+import { SoundUtil } from "../util/SoundUtil";
 
 export class ExperienceWnd2 extends UI_ExperienceWnd2 {
     _callBack: Function;
@@ -22,6 +23,7 @@ export class ExperienceWnd2 extends UI_ExperienceWnd2 {
                 DataUtil.player.hit += 1.5;
                 DataUtil.player.crit += 1.5;
                 DataUtil.player.dodge += 1.5;
+                SoundUtil.playSound(SoundUtil.sound5);
                 if (!!this._callBack) this._callBack();
             },270)
         })

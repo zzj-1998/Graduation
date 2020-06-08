@@ -356,6 +356,15 @@
     <image id="9xpgiz" name="Item01-08_11.png" path="/ani/prop/images/"/>
     <image id="9xpgj0" name="Item01-01_05.png" path="/ani/prop/images/"/>
     <component id="9xpgj1" name="Hammer.xml" path="/ani/prop/" exported="true"/>
+    <component id="kbzaj2" name="BuyKeyWnd.xml" path="/screen/game/" exported="true"/>
+    <component id="9pu8j3" name="SellKeyWnd.xml" path="/screen/game/" exported="true"/>
+    <component id="e5g7j4" name="ChangeLayerWnd.xml" path="/screen/game/" exported="true"/>
+    <image id="e5g7j5" name="4.png" path="/screen/game/images/"/>
+    <component id="e5g7j7" name="LayerBtn.xml" path="/screen/game/" exported="true"/>
+    <component id="e5g7j8" name="AttributeWnd.xml" path="/screen/game/" exported="true"/>
+    <component id="e5g7j9" name="AttributeBar.xml" path="/screen/game/" exported="true"/>
+    <component id="e5g7ja" name="BadgeBar.xml" path="/comp/prop/" exported="true"/>
+    <component id="e5g7jb" name="WheelBar.xml" path="/comp/prop/" exported="true"/>
   </resources>
   <publish name="Main" genCode="true"/>
 </packageDescription>

@@ -6,6 +6,8 @@ const map: Array<any> = require('../data/map.json').list;
 const monster: Array<any> = require('../data/monster.json').list;
 export class DataUtil {
     public static player: Player;
+    public static isOpenWheel: boolean;
+    public static isOpenBadge: boolean;
     
     public static initPlayer() {
         this.player = new Player();
@@ -14,12 +16,14 @@ export class DataUtil {
         }
         else {
             // if (Laya.LocalStorage.getJSON('data')) {
-            //     this.player.initByData(Laya.LocalStorage.getJSON('data'));
+            //     this.player.initByData(JSON.parse(JSON.stringify(Laya.LocalStorage.getJSON('data'))));
             // }
             // else {
                 this.player.init();
             // }
         }
+        this.isOpenBadge = false;
+        this.isOpenWheel = false;
     }
 
     public static saveNow() {

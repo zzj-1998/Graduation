@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="704,704">
+  <displayList>
+    <graph id="n1_qkss" name="n1" xy="27,27" size="650,650" group="n13_qkss" type="rect" fillColor="#ff010101"/>
+    <loader id="n3_qkss" name="n3" xy="27,27" size="650,650" group="n13_qkss" url="ui://n1eyqnayjt4oge" fill="scale">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </loader>
+    <image id="n15_e5g7" name="n15" src="e5g7j5" fileName="screen/game/images/4.png" xy="139,58" group="n13_qkss"/>
+    <component id="n12_qkss" name="btnClose" src="prsq2" fileName="common/button/CommonIconBtn.xml" xy="617,43" size="43,46" group="n13_qkss" scale="0.6,0.6">
+      <Button icon="ui://n1eyqnayaie1fp"/>
+    </component>
+    <list id="n17_e5g7" name="layerList" xy="63,181" size="573,447" group="n13_qkss" layout="flow_vt" overflow="hidden" lineGap="5" colGap="15" lineItemCount="7" defaultItem="ui://n1eyqnaye5g7j7" align="center">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <group id="n13_qkss" name="n13" xy="27,27" size="650,650" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>

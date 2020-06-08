@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="704,80">
+  <displayList>
+    <loader id="n0_e5g7" name="icon" xy="15,8" size="64,64" fill="scale"/>
+    <text id="n1_e5g7" name="n1" xy="92,0" size="73,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="名称"/>
+    <text id="n6_e5g7" name="n6" xy="92,40" size="73,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="生命"/>
+    <text id="n2_e5g7" name="n2" xy="296,0" size="73,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="攻击"/>
+    <text id="n3_e5g7" name="n3" xy="296,40" size="73,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="防御"/>
+    <text id="n5_e5g7" name="n5" xy="500,40" size="73,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="损失"/>
+    <text id="n4_e5g7" name="n4" xy="500,0" size="73,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="金·经"/>
+    <text id="n7_e5g7" name="name" xy="165,0" size="131,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text=""/>
+    <text id="n8_e5g7" name="life" xy="165,40" size="131,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text=""/>
+    <text id="n9_e5g7" name="attack" xy="369,0" size="131,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text=""/>
+    <text id="n10_e5g7" name="defense" xy="369,40" size="131,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text=""/>
+    <text id="n11_e5g7" name="goldAndExe" xy="573,0" size="131,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text=""/>
+    <text id="n12_e5g7" name="loss" xy="573,40" size="131,40" fontSize="20" color="#ffffff" align="center" vAlign="middle" autoSize="none" text=""/>
+  </displayList>
+</component>

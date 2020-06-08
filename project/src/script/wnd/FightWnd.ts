@@ -3,16 +3,18 @@ import { DataUtil } from "../util/DataUtil";
 import { MonsterUtil } from "../util/MonsterUtil";
 import { FlyMsgBox } from "./FlyMsgBox";
 import { LifeComp } from "./LifeComp";
+import { SoundUtil } from "../util/SoundUtil";
 
 export class FightWnd extends UI_FightWnd {
     data: any;
     _callBack: Function;
+    _failBack: Function;
     static create(): FightWnd {
         let scene = <FightWnd>fairygui.UIPackage.createObjectFromURL(UI_FightWnd.URL, FightWnd);
         return scene;
     }
 
-    initFightScene(id: number, cb: Function) {
+    initFightScene(id: number, cb: Function, failCb: Function) {
         this.m_type.selectedIndex = 0;
         this.data = DataUtil.getMonsterInformationById(id);
         this.m_life.text = "" + this.data.life;
@@ -27,6 +29,7 @@ export class FightWnd extends UI_FightWnd {
             Laya.timer.loop(500, this, this.fightSelf);
         })
         this._callBack = cb;
+        this._failBack = failCb;
     }
     
     public recover() {
@@ -61,12 +64,13 @@ export class FightWnd extends UI_FightWnd {
         else {
             Laya.timer.clearAll(this);
             this.m_type.selectedIndex = 1;
+            SoundUtil.playSound(SoundUtil.sound4);
             Laya.timer.once(1000, this, () => {
                 this.recover();
             })
         }
     }
-
+    
     fightSelf() {
         if (this.data.attack <= DataUtil.player.defense) {
             return;
@@ -89,14 +93,23 @@ export class FightWnd extends UI_FightWnd {
         }
         else {
             Laya.timer.clearAll(this);
-            DataUtil.removeNow();
+            if (DataUtil.player.blood_blue || DataUtil.player.blood_red) {
+                DataUtil.player.life = 1;
+                if (this.parent) {
+                    this.removeFromParent();
+                }
+                if (!!this._failBack) this._failBack();
+            }
+            else {
+                DataUtil.removeNow();
+            }
         }
     }
 
-    static startFight(id: number, cb: Function,comp:fairygui.GComponent) {
+    static startFight(id: number, cb: Function,failCb: Function,comp:fairygui.GComponent) {
         let temp = this.create();
         temp.setXY(comp.x, comp.y);
         fairygui.GRoot.inst.addChild(temp);
-        temp.initFightScene(id, cb);
+        temp.initFightScene(id, cb, failCb);
     }
 }
