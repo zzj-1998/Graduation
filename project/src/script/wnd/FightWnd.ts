@@ -24,6 +24,39 @@ export class FightWnd extends UI_FightWnd {
         this.m_myAttack.text = "" + DataUtil.player.attack;
         this.m_myDefense.text = "" + DataUtil.player.defense;
         this.m_monster.url = MonsterUtil.getMonsterURLById(id);
+        let FirstLife = 0;
+        switch (id) {
+            case 20:
+                FirstLife = 100;
+                break;
+                case 21:
+                FirstLife = 300;
+                break;
+                case 30:
+                FirstLife = Math.floor(DataUtil.player.life / 3);
+                break;
+        }
+        if (FirstLife) {
+            let life = Number(this.m_myLife.text) - FirstLife;
+                LifeComp.LossLife(FirstLife, 1, this.getChild('n13'));
+                if (life > 0) {
+                    DataUtil.player.life = life;
+                    this.m_myLife.text = "" + life;
+                }
+                else {
+                    Laya.timer.clearAll(this);
+                    if (DataUtil.player.blood_blue || DataUtil.player.blood_red) {
+                        DataUtil.player.life = 1;
+                        if (this.parent) {
+                            this.removeFromParent();
+                        }
+                        if (!!this._failBack) this._failBack();
+                    }
+                    else {
+                        DataUtil.removeNow();
+                    }
+                }
+        }
         Laya.timer.loop(500, this, this.fightMonster);
         Laya.timer.once(250, this, () => {
             Laya.timer.loop(500, this, this.fightSelf);
@@ -31,7 +64,7 @@ export class FightWnd extends UI_FightWnd {
         this._callBack = cb;
         this._failBack = failCb;
     }
-    
+
     public recover() {
         if (this.parent) {
             this.removeFromParent();
@@ -73,7 +106,7 @@ export class FightWnd extends UI_FightWnd {
             }
         }
     }
-    
+
     fightSelf() {
         if (this.data.attack <= DataUtil.player.defense) {
             return;
@@ -109,7 +142,7 @@ export class FightWnd extends UI_FightWnd {
         }
     }
 
-    static startFight(id: number, cb: Function,failCb: Function,comp:fairygui.GComponent) {
+    static startFight(id: number, cb: Function, failCb: Function, comp: fairygui.GComponent) {
         let temp = this.create();
         temp.setXY(comp.x, comp.y);
         fairygui.GRoot.inst.addChild(temp);

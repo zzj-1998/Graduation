@@ -31,18 +31,20 @@ export default class Player {
     public isHaveBadge: boolean;//是否拥有圣光徽
     public isHaveWheel: boolean;//是否拥有风之轮盘
     public maxLayer: number;//最高达到的楼层
+    public isHaveHammer: boolean;//是否获得了星光神锒
+    public meetThief: boolean;//是否遇见过小偷
 
     init() {
         this.grade = 1;
         this.life = 1000;
-        this.attack = 10;
-        this.defense = 10;
+        this.attack = 180;
+        this.defense = 310;
         this.hit = 0;
         this.crit = 0;
         this.dodge = 0;
         this.gold = 0;
         this.experience = 0;
-        this.layer = 0;
+        this.layer = 7;
         this.key = [1, 1, 1];
         this.blood_red = 0;
         this.blood_blue = 0;
@@ -51,6 +53,8 @@ export default class Player {
         this.isHaveBadge = false;
         this.isHaveWheel = false;
         this.maxLayer = 0;
+        this.isHaveHammer = false;
+        this.meetThief = false;
         this.initMap();
     }
 
@@ -72,6 +76,8 @@ export default class Player {
         this.isHaveBadge = data.isHaveBadge;
         this.isHaveWheel = data.isHaveWheel;
         this.maxLayer = data.maxLayer;
+        this.isHaveHammer = data.isHaveHammer;
+        this.meetThief = data.meetThief;
         this.map = data.map;
     }
 

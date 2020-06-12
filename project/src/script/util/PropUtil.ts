@@ -160,7 +160,10 @@ export class PropUtil {
                 FlyMsgBox.showTip("得到 风之轮盘 点击右侧图标即可使用 ！");
                 return false;
             case 16:
-                //幸运十字架 给仙子增加1.33倍血攻防
+                DataUtil.player.life += Math.floor(DataUtil.player.life / 3);
+                DataUtil.player.attack += Math.floor(DataUtil.player.attack / 3);
+                DataUtil.player.defense += Math.floor(DataUtil.player.defense / 3);
+                FlyMsgBox.showTip("得到 幸运十字架 血攻防提升三分之一 ！");
                 return false;
             case 17:
                 DataUtil.player.defense += 85;
@@ -177,7 +180,8 @@ export class PropUtil {
                 FlyMsgBox.showTip("得到 大飞羽 等级提升三级 ！");
                 return false;
             case 19:
-                //星光神锒 给小偷开18层门
+                DataUtil.player.isHaveHammer = true;
+                FlyMsgBox.showTip("得到 星光神锒 18层门已经开启 ！");
                 return false;
             case 20:
                 DataUtil.player.attack += 150;

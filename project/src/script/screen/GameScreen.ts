@@ -157,8 +157,16 @@ export default class GameScreen extends ui.game.gameUI {
             }
             //上下楼梯位置
             if (DataUtil.getMap(DataUtil.player.layer).floor[0] >= 0 && DataUtil.getMap(DataUtil.player.layer).floor[0] == i) {
-                let upStairs = <UI_UpStairs>fairygui.UIPackage.createObjectFromURL(UI_UpStairs.URL, UI_UpStairs);
-                item.addChild(upStairs);
+                if (DataUtil.player.layer == 18) {
+                    if (DataUtil.player.isHaveHammer) {
+                        let upStairs = <UI_UpStairs>fairygui.UIPackage.createObjectFromURL(UI_UpStairs.URL, UI_UpStairs);
+                        item.addChild(upStairs);
+                    }
+                }
+                else {
+                    let upStairs = <UI_UpStairs>fairygui.UIPackage.createObjectFromURL(UI_UpStairs.URL, UI_UpStairs);
+                    item.addChild(upStairs);
+                }
             }
             if (DataUtil.getMap(DataUtil.player.layer).floor[1] >= 0 && DataUtil.getMap(DataUtil.player.layer).floor[1] == i) {
                 let downStairs = <UI_DownStairs>fairygui.UIPackage.createObjectFromURL(UI_DownStairs.URL, UI_DownStairs);
@@ -591,22 +599,24 @@ export default class GameScreen extends ui.game.gameUI {
     }
 
     protected _showBadgeWnd() {
+        if (this._isFighting) return;
         if (!DataUtil.player.isHaveBadge) {
             FlyMsgBox.showTip("暂时无法使用")
             return;
         }
-        if (DataUtil.isOpenBadge || DataUtil.isOpenWheel || this._isFighting) return;
+        if (DataUtil.isOpenBadge || DataUtil.isOpenWheel) return;
         DataUtil.isOpenBadge = true;
         AttributeWnd.showAttributeWnd(this._view.m_mapList,this.initOperation.bind(this));
         this._moveStop();
     }
 
     protected _showWheelWnd() {
+        if (this._isFighting) return;
         if (!DataUtil.player.isHaveWheel || DataUtil.player.layer == 21) {
             FlyMsgBox.showTip("暂时无法使用")
             return;
         }
-        if (DataUtil.isOpenWheel || DataUtil.isOpenBadge || this._isFighting) return;
+        if (DataUtil.isOpenWheel || DataUtil.isOpenBadge) return;
         DataUtil.isOpenWheel = true;
         ChangeLayerWnd.showChangeLayer(this.jumpLayer.bind(this),this._view.m_mapList,this.initOperation.bind(this));
         this._moveStop();

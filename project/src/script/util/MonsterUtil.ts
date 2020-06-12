@@ -32,7 +32,7 @@ import UI_Monster35 from "../../ui/Main/UI_Monster35";
 
 export class MonsterUtil {
 
-    // 无23 24 29 31
+    // 无24 29 31
     static getMonsterById(id: number) {
         switch(id) {
             case 1:
@@ -78,6 +78,8 @@ export class MonsterUtil {
             case 21:
                 return <UI_Monster21>fairygui.UIPackage.createObjectFromURL(UI_Monster21.URL, UI_Monster21);
             case 22:
+                return <UI_Monster22>fairygui.UIPackage.createObjectFromURL(UI_Monster22.URL, UI_Monster22);
+            case 23:
                 return <UI_Monster22>fairygui.UIPackage.createObjectFromURL(UI_Monster22.URL, UI_Monster22);
             case 25:
                 return <UI_Monster25>fairygui.UIPackage.createObjectFromURL(UI_Monster25.URL, UI_Monster25);
@@ -160,6 +162,8 @@ export class MonsterUtil {
             case 21:
                 return UI_Monster21.URL;
             case 22:
+                return UI_Monster22.URL;
+            case 23:
                 return UI_Monster22.URL;
             case 25:
                 return UI_Monster25.URL;

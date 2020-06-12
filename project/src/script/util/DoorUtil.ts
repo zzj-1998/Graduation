@@ -26,7 +26,7 @@ export class DoorUtil {
 
     static judgeOpenDoorOrNot(id: number) {
         if (id > 3) {
-            if (id == 4) return false;
+            if (id == 4) return DataUtil.player.meetThief;
             if (id == 5) return true;
             if (id == 6) {
                 if (DataUtil.player.map[DataUtil.player.layer].monster[0]) {

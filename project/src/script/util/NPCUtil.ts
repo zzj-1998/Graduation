@@ -12,6 +12,7 @@ import { ExperienceWnd } from "../wnd/ExperienceWnd";
 import { ExperienceWnd2 } from "../wnd/ExperienceWnd2";
 import { BuyKeyWnd } from "../wnd/BuyKeyWnd";
 import { SellKeyWnd } from "../wnd/SellKeyWnd";
+import { DataUtil } from "./DataUtil";
 
 export class NPCUtil {
 
@@ -94,7 +95,7 @@ export class NPCUtil {
                 //二层商人
                 break;
             case 12:
-                //小偷
+                DataUtil.player.meetThief = true;
                 break;
             case 13:
                 BuyKeyWnd.showBuyKeyWnd(cb,comp,finish);
