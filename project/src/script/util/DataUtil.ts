@@ -12,7 +12,12 @@ export class DataUtil {
     public static initPlayer() {
         this.player = new Player();
         if (IsWxUtil.isWxEnvironment()) {
-            this.player.initByData(WxUtil.getData());
+            if (WxUtil.getData()) {
+                this.player.initByData(WxUtil.getData());
+            }
+            else {
+                this.player.init();
+            }
         }
         else {
             // if (Laya.LocalStorage.getJSON('data')) {

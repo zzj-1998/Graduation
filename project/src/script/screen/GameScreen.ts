@@ -595,7 +595,7 @@ export default class GameScreen extends ui.game.gameUI {
             FlyMsgBox.showTip("暂时无法使用")
             return;
         }
-        if (DataUtil.isOpenBadge || DataUtil.isOpenWheel) return;
+        if (DataUtil.isOpenBadge || DataUtil.isOpenWheel || this._isFighting) return;
         DataUtil.isOpenBadge = true;
         AttributeWnd.showAttributeWnd(this._view.m_mapList,this.initOperation.bind(this));
         this._moveStop();
@@ -606,7 +606,7 @@ export default class GameScreen extends ui.game.gameUI {
             FlyMsgBox.showTip("暂时无法使用")
             return;
         }
-        if (DataUtil.isOpenWheel || DataUtil.isOpenBadge) return;
+        if (DataUtil.isOpenWheel || DataUtil.isOpenBadge || this._isFighting) return;
         DataUtil.isOpenWheel = true;
         ChangeLayerWnd.showChangeLayer(this.jumpLayer.bind(this),this._view.m_mapList,this.initOperation.bind(this));
         this._moveStop();

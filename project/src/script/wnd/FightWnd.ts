@@ -68,6 +68,9 @@ export class FightWnd extends UI_FightWnd {
             Laya.timer.once(1000, this, () => {
                 this.recover();
             })
+            if (this.data.id == 36) {
+                //游戏通关
+            }
         }
     }
     

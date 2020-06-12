@@ -34,17 +34,17 @@ export default class Player {
 
     init() {
         this.grade = 1;
-        this.life = 10000;
-        this.attack = 1000;
-        this.defense = 1000;
-        this.hit = 1;
-        this.crit = 1;
-        this.dodge = 1;
-        this.gold = 1000;
-        this.experience = 1000;
-        this.layer = 5;
-        this.key = [10, 10, 10];
-        this.blood_red = 1;
+        this.life = 1000;
+        this.attack = 10;
+        this.defense = 10;
+        this.hit = 0;
+        this.crit = 0;
+        this.dodge = 0;
+        this.gold = 0;
+        this.experience = 0;
+        this.layer = 0;
+        this.key = [1, 1, 1];
+        this.blood_red = 0;
         this.blood_blue = 0;
         this.characterIndex = 0;
         this.map = [];
