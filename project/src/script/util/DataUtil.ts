@@ -20,12 +20,12 @@ export class DataUtil {
             }
         }
         else {
-            // if (Laya.LocalStorage.getJSON('data')) {
-            //     this.player.initByData(JSON.parse(JSON.stringify(Laya.LocalStorage.getJSON('data'))));
-            // }
-            // else {
-                this.player.init();
-            // }
+            if (Laya.LocalStorage.getJSON('data')) {
+                this.player.initByData(JSON.parse(JSON.stringify(Laya.LocalStorage.getJSON('data'))));
+            }
+            else {
+               this.player.init();
+            }
         }
         this.isOpenBadge = false;
         this.isOpenWheel = false;
