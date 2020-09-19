@@ -5,6 +5,8 @@ import UI_ChangeLayerWnd from "../../ui/Main/UI_ChangeLayerWnd";
 export class ChangeLayerWnd extends UI_ChangeLayerWnd {
     _callBack: Function;
     _finish: Function;
+
+
     static create(): ChangeLayerWnd {
         let scene = <ChangeLayerWnd>fairygui.UIPackage.createObjectFromURL(UI_ChangeLayerWnd.URL, ChangeLayerWnd);
         return scene;
@@ -25,6 +27,7 @@ export class ChangeLayerWnd extends UI_ChangeLayerWnd {
         })
     }
     
+    /**回收界面,点关闭就把这个界面回收掉 */
     public recover() {
         if (this.parent) {
             this.removeFromParent();
@@ -33,6 +36,7 @@ export class ChangeLayerWnd extends UI_ChangeLayerWnd {
         if (!!this._finish) this._finish();
     }
 
+    //具体的楼层跳转功能
     protected changeLayer(success: Function,layer: number) {
         DataUtil.isOpenWheel = false;
         if (layer == DataUtil.player.layer || layer > DataUtil.player.maxLayer) {

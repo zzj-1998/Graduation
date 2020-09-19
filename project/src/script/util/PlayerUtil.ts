@@ -34,6 +34,7 @@ export default class Player {
     public isHaveHammer: boolean;//是否获得了星光神锒
     public meetThief: boolean;//是否遇见过小偷
 
+    /**初始化角色信息 */
     init() {
         this.grade = 1;
         this.life = 1000;
@@ -81,8 +82,9 @@ export default class Player {
         this.map = data.map;
     }
 
+    /**初始化整个魔塔地图 */
     initMap() {
-        let mapList = DataUtil.getMapList();
+        let mapList = DataUtil.getMapList();//从excel转成的json的list中获取
         for (let i = 0; i < mapList.length; i++) {
             let item = {
                 npc: [],

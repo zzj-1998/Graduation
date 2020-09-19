@@ -24,9 +24,10 @@ export class DoorUtil {
         }
     }
 
+    //判读开门的条件
     static judgeOpenDoorOrNot(id: number) {
         if (id > 3) {
-            if (id == 4) return DataUtil.player.meetThief;
+            if (id == 4) return DataUtil.player.meetThief;//4号门，要遇见小偷后
             if (id == 5) return true;
             if (id == 6) {
                 if (DataUtil.player.map[DataUtil.player.layer].monster[0]) {
@@ -35,7 +36,7 @@ export class DoorUtil {
                 return true;
             }
         }
-        if (DataUtil.player.key[id - 1]) {
+        if (DataUtil.player.key[id - 1]) {//小于=3号门
             DataUtil.player.key[id - 1]--;
             SoundUtil.playSound(SoundUtil.sound6);
             return true;

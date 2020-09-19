@@ -90,7 +90,7 @@ export class PropUtil {
 
     }
 
-    public static addProp(id: number) {
+    public static addProp(id: number) {//这里判断是什么道具
         SoundUtil.playSound(SoundUtil.sound7);
         switch (id) {
             case 1:

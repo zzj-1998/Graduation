@@ -1,6 +1,7 @@
 import Player from "./PlayerUtil";
 import { IsWxUtil, WxUtil } from "./IsWxUtil";
 
+/**从json中获取list字段，即xlsx中的数据，保持为数组 */
 const event: Array<any> = require('../data/event.json').list;
 const map: Array<any> = require('../data/map.json').list;
 const monster: Array<any> = require('../data/monster.json').list;
@@ -9,6 +10,7 @@ export class DataUtil {
     public static isOpenWheel: boolean;
     public static isOpenBadge: boolean;
     
+    /**初始化游戏角色信息 */
     public static initPlayer() {
         this.player = new Player();
         if (IsWxUtil.isWxEnvironment()) {
@@ -32,11 +34,11 @@ export class DataUtil {
     }
 
     public static saveNow() {
-        if (IsWxUtil.isWxEnvironment()) {
+        if (IsWxUtil.isWxEnvironment()) {//判断是否为微信环境
             WxUtil.saveNow(this.player);
         }
         else {
-            Laya.LocalStorage.setJSON("data", this.player);
+            Laya.LocalStorage.setJSON("data", this.player);//保存在网页本地
         }
     }
 
@@ -150,6 +152,7 @@ export class DataUtil {
         return arr;
     }
 
+    /**从转成json的list中，通过怪物id获取怪物信息 */
     public static getMonsterInformationById(id: number) {
         return monster.filter(a => a.id == id)[0];
     }

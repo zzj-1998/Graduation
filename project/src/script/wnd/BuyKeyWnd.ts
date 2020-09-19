@@ -2,6 +2,7 @@ import { DataUtil } from "../util/DataUtil";
 import { FlyMsgBox } from "./FlyMsgBox";
 import UI_BuyKeyWnd from "../../ui/Main/UI_BuyKeyWnd";
 
+
 export class BuyKeyWnd extends UI_BuyKeyWnd {
     _callBack: Function;
     _finish: Function;

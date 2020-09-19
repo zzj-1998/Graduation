@@ -44,14 +44,16 @@ export default class GameScreen extends ui.game.gameUI {
         this.initOperation();
         this._walking = false;
         this._isFighting = false;
+
+
         this._view.m_btnSave.onClick(this, ()=>{
             DataUtil.saveNow();
             FlyMsgBox.showTip("保存成功");
-        });
-        this._view.m_blood_red.onClick(this, this._useBloodRed);
-        this._view.m_blood_blue.onClick(this, this._useBloodBlue);
-        this._view.m_badgeBtn.onClick(this, this._showBadgeWnd);
-        this._view.m_WheelBtn.onClick(this, this._showWheelWnd);
+        });//保存按钮
+        this._view.m_blood_red.onClick(this, this._useBloodRed);//喝200血药的按钮
+        this._view.m_blood_blue.onClick(this, this._useBloodBlue);//喝500血药的按钮
+        this._view.m_badgeBtn.onClick(this, this._showBadgeWnd);//显示怪物属性的按钮，点击触发_showBadgeWnd函数
+        this._view.m_WheelBtn.onClick(this, this._showWheelWnd);//楼层跳转的按钮，点击触发_showWheelWnd函数
         SoundUtil.playBgm();
     }
 
@@ -68,7 +70,7 @@ export default class GameScreen extends ui.game.gameUI {
         this.flushPlayerPanel();
     }
 
-    /** 刷新面板 */
+    /** 刷新面板,数据改变（比如通过打怪改变了数据，比如金币变多）就保存一次，一次保存所有的信息 */
     protected flushPlayerPanel() {
         this._view.m_panel.getChild('grade').asTextField.text = "" + DataUtil.player.grade;
         this._view.m_panel.getChild('life').asCom.getChild('num').asTextField.text = "" + DataUtil.player.life;
@@ -138,7 +140,7 @@ export default class GameScreen extends ui.game.gameUI {
     /** 初始化地图 */
     protected initMapList(type?: number) {
         this._view.m_mapList.removeChildren(0, 120);
-        let mapList = DataUtil.getMap(DataUtil.player.layer).map;
+        let mapList = DataUtil.getMap(DataUtil.player.layer).map;//获取当前这层存储的地图
         for (let i = 0; i < mapList.length; i++) {
             let item = this._view.m_mapList.addItemFromPool() as UI_MapItem;
             item.getChild('map').asLoader.url = ResUrlUtil.getEventUrl(DataUtil.getEvent(mapList[i]).icon);
@@ -208,7 +210,7 @@ export default class GameScreen extends ui.game.gameUI {
         let temp = DataUtil.player.map[DataUtil.player.layer];
         for (let i = 0; i < temp.monster.length; i++) {
             if (temp.monsterIndex[i] == index) {
-                let monster = MonsterUtil.getMonsterById(temp.monster[i]);
+                let monster = MonsterUtil.getMonsterById(temp.monster[i]);//加载怪物ui
                 monster.setScale(2, 2);
                 item.addChild(monster);
             }
@@ -220,7 +222,7 @@ export default class GameScreen extends ui.game.gameUI {
         let temp = DataUtil.player.map[DataUtil.player.layer];
         for (let i = 0; i < temp.prop.length; i++) {
             if (temp.propIndex[i] == index) {
-                let prop = PropUtil.getPropById(temp.prop[i]);
+                let prop = PropUtil.getPropById(temp.prop[i]);//加载道具ui
                 item.addChild(prop);
             }
         }
@@ -228,25 +230,27 @@ export default class GameScreen extends ui.game.gameUI {
 
     /** 操作上下左右 */
     protected initOperation() {
-        this._view.m_operation.getChild('btnUp').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartUp);
+        this._view.m_operation.getChild('btnUp').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartUp);//移动按钮的点击事件
         this._view.m_operation.getChild('btnDown').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartDown);
         this._view.m_operation.getChild('btnRight').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartRight);
         this._view.m_operation.getChild('btnLeft').asGraph.on(Laya.Event.MOUSE_DOWN, this, this._moveStartLeft);
     }
 
+    /**移动前需要做的事情 */
     protected _beforeMove() {
         this._view.m_operation.getChild('btnUp').asGraph.off(Laya.Event.MOUSE_DOWN, this, this._moveStartUp);
         this._view.m_operation.getChild('btnDown').asGraph.off(Laya.Event.MOUSE_DOWN, this, this._moveStartDown);
         this._view.m_operation.getChild('btnRight').asGraph.off(Laya.Event.MOUSE_DOWN, this, this._moveStartRight);
-        this._view.m_operation.getChild('btnLeft').asGraph.off(Laya.Event.MOUSE_DOWN, this, this._moveStartLeft);
-        this._view.m_operation.on(Laya.Event.MOUSE_OUT, this, this._moveReturn);
-        this._view.m_operation.on(Laya.Event.MOUSE_UP, this, this._moveReturn);
+        this._view.m_operation.getChild('btnLeft').asGraph.off(Laya.Event.MOUSE_DOWN, this, this._moveStartLeft);//前四步取消监听点击事件
+        this._view.m_operation.on(Laya.Event.MOUSE_OUT, this, this._moveReturn);//监听手指移除操作盘上的事件
+        this._view.m_operation.on(Laya.Event.MOUSE_UP, this, this._moveReturn);//监听手指拿起来的事件，只要手指不在操做盘，就停止移动
         this._view.m_operation.getChild('btnUp').asGraph.on(Laya.Event.MOUSE_OVER, this, this._moveUp);
         this._view.m_operation.getChild('btnDown').asGraph.on(Laya.Event.MOUSE_OVER, this, this._moveDown);
         this._view.m_operation.getChild('btnRight').asGraph.on(Laya.Event.MOUSE_OVER, this, this._moveRight);
-        this._view.m_operation.getChild('btnLeft').asGraph.on(Laya.Event.MOUSE_OVER, this, this._moveLeft);
+        this._view.m_operation.getChild('btnLeft').asGraph.on(Laya.Event.MOUSE_OVER, this, this._moveLeft);//监听鼠标停留在操作盘上，保持移动
     }
 
+    /**开始向上运动 */
     protected _moveStartUp() {
         this._beforeMove();
         this._moveUp();
@@ -267,6 +271,7 @@ export default class GameScreen extends ui.game.gameUI {
         this._moveLeft();
     }
 
+    /**人物向上移动 */
     protected _moveUp() {
         this._view.m_operation.getController('type').selectedIndex = 1;
         if (this._walking) return;
@@ -478,7 +483,7 @@ export default class GameScreen extends ui.game.gameUI {
     protected _judgeProp(index: number) {
         for (let i = 0; i < DataUtil.player.map[DataUtil.player.layer].propIndex.length; i++) {
             if (index == DataUtil.player.map[DataUtil.player.layer].propIndex[i]) {
-                if (PropUtil.addProp(DataUtil.player.map[DataUtil.player.layer].prop[i])) {
+                if (PropUtil.addProp(DataUtil.player.map[DataUtil.player.layer].prop[i])) {//添加道具，addprop函数里判断是否为血瓶，如果返回true，则执行下面的贝塞尔动画
                     //血瓶动画(贝塞尔)
                     let { x, y } = this._view.m_mapList._children[index].asCom.getChildAt(1).asCom.localToGlobal();
                     let temp = this._view.m_mapList._children[index].asCom.getChildAt(1).asCom;
@@ -598,6 +603,7 @@ export default class GameScreen extends ui.game.gameUI {
         }
     }
 
+    /**显示怪物属性界面 */
     protected _showBadgeWnd() {
         if (this._isFighting) return;
         if (!DataUtil.player.isHaveBadge) {
@@ -606,10 +612,11 @@ export default class GameScreen extends ui.game.gameUI {
         }
         if (DataUtil.isOpenBadge || DataUtil.isOpenWheel) return;
         DataUtil.isOpenBadge = true;
-        AttributeWnd.showAttributeWnd(this._view.m_mapList,this.initOperation.bind(this));
+        AttributeWnd.showAttributeWnd(this._view.m_mapList,this.initOperation.bind(this));//显示怪物属性二级界面，传过去m_mapList组件，其是gamescreen中的组件，即中间最大的方框
         this._moveStop();
     }
 
+    /**显示楼层跳转界面 */
     protected _showWheelWnd() {
         if (this._isFighting) return;
         if (!DataUtil.player.isHaveWheel || DataUtil.player.layer == 21) {

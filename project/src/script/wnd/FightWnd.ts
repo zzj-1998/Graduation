@@ -142,6 +142,7 @@ export class FightWnd extends UI_FightWnd {
         }
     }
 
+    //战斗函数，在战斗函数中得到怪物的所有资料
     static startFight(id: number, cb: Function, failCb: Function, comp: fairygui.GComponent) {
         let temp = this.create();
         temp.setXY(comp.x, comp.y);
