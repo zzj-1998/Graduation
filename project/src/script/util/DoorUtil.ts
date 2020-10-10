@@ -7,6 +7,7 @@ import UI_wall_steel from "../../ui/Main/UI_wall_steel";
 import { SoundUtil } from "./SoundUtil";
 
 export class DoorUtil {
+    /**根据门的id获取对应门的实例对象 */
     static getDoorById(id: number) {
         switch (id) {
             case 1:
@@ -24,23 +25,23 @@ export class DoorUtil {
         }
     }
 
-    //判读开门的条件
+    /**根据门的id判断门是否能被打开 */
     static judgeOpenDoorOrNot(id: number) {
         if (id > 3) {
-            if (id == 4) return DataUtil.player.meetThief;//4号门，要遇见小偷后
-            if (id == 5) return true;
+            if (id == 4) return DataUtil.player.meetThief;      //返回有没有遇见过小偷，有遇见过小偷，返回true，否则返回false
+            if (id == 5) return true;        //遇见5号门就直接打开
             if (id == 6) {
-                if (DataUtil.player.map[DataUtil.player.layer].monster[0]) {
-                    return false;
+                if (DataUtil.player.map[DataUtil.player.layer].monster[0]) {    //对应楼层的怪物还没有被消灭完，则不能开门，执行return false
+                    return false;   //返回不能开门
                 }
-                return true;
+                return true;        //否则，返回能开门
             }
         }
-        if (DataUtil.player.key[id - 1]) {//小于=3号门
-            DataUtil.player.key[id - 1]--;
-            SoundUtil.playSound(SoundUtil.sound6);
-            return true;
+        if (DataUtil.player.key[id - 1]) {           //对应门的钥匙数量有剩余，则执行if内的函数
+            DataUtil.player.key[id - 1]--;           //对应门的钥匙数量-1
+            SoundUtil.playSound(SoundUtil.sound6);   //播放sound6开门声音
+            return true;  //返回能开门
         }
-        return false;
+        return false;    //没有钥匙，返回不能开门
     }
 }
